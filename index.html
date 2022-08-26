@@ -5,7 +5,7 @@
 	<title>Главная</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20220826144850">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220826222405">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -16,30 +16,24 @@
 				<div class="header__container">
 					<div class="header__top-left">
 						<div class="header__top-block">
-							<div class="header__cities">
-								<div class="customInputContainer" data-da=".menu__bottom-da,520,first">
-									<div class="customInput">
-										<div class="selectedData _icon-location">г.Москва</div>
+							<div class="customInputContainer" data-da=".menu__bottom-da,520,first">
+								<div class="customInput">
+									<div class="selectedData _icon-location">г.Москва</div>
+								</div>
+								<div class="options">
+									<div class="searchInput">
+										<input type="text" id="searchInput" placeholder="Поиск">
+										<i class="_icon-search"></i>
 									</div>
-									<div class="options">
-										<div class="searchInput">
-											<input type="text" id="searchInput" placeholder="Поиск">
-											<i class="_icon-search"></i>
-										</div>
-										<!-- Города указывать в тэге script снизу -->
-										<ul>
-										</ul>
-									</div>
+									<!-- Города указывать в тэге script снизу -->
+									<ul>
+									</ul>
 								</div>
 							</div>
 							<a href="tel:84955674380" class="header__phone" data-da=".menu__bottom-da,520,0">8-495-567-43-80</a>
 						</div>
-						<div class="header__top-block">
-							<p class="header__working _icon-clock"><span>Работаем:</span> с 9:00 - 18:00 (Пн-Пт)</p>
-						</div>
-						<div class="header__top-block">
-							<a href="#" class="header__mail _icon-mail">@gmail.com</a>
-						</div>
+						<p class="header__working header__top-block _icon-clock"><span>Работаем:</span> с 9:00 - 18:00 (Пн-Пт)</p>
+						<a href="#" class="header__mail header__top-block _icon-mail">@gmail.com</a>
 					</div>
 					<div class="header__top-right" data-da=".menu__bottom,520,last">
 						<p>
@@ -97,19 +91,17 @@
 						<a href="#" class="header__blue-btn blue-btn" data-popup="#request">Онлайн заказ</a>
 					</div>
 					<div class="header__personal-btns" data-da=".menu__btns,520,first">
-						<a href="#" class="header__like">
-							<i class="_icon-heart"></i>
-						</a>
-						<a href="#" class="header__cart">
-							<i class="_icon-cart"></i>
+						<a href="#" class="header__like _icon-heart"></a>
+						<a href="#" class="header__cart _icon-cart">
 							<p>
 								<span class="header__cart-first-span">Корзина пуста</span>
-								<span class="header__cart-second-span"><span class="cart-goods">Товаров:</span><span class="cart-count">0</span></span>
+								<span class="header__cart-second-span">
+									<span class="cart-goods">Товаров:</span>
+									<span class="cart-count">0</span>
+								</span>
 							</p>
 						</a>
-						<a href="#" class="header__account">
-							<i class="_icon-user"></i>
-						</a>
+						<a href="#" class="header__account _icon-user"></a>
 					</div>
 				</div>
 			</div>
@@ -118,74 +110,42 @@
 					<nav class="header__nav">
 						<div class="header__catalog" data-da=".menu__top,520,1">
 							<div class="header__catalog-btn">
-								<div class="header__dotts">
-									<i class="_icon-dots"></i>
-								</div>
+								<div class="header__dotts _icon-dots"></div>
 								<p class="_icon-arrow-d">Каталог</p>
 							</div>
 							<div class="header__catalog-menu catalog">
 								<div class="catalog__left">
 									<div data-tabs="520" class="catalog__tabs">
 										<nav data-tabs-titles class="catalog__navigation">
-											<button type="submit" class="catalog__title _tab-active">
-												<div class="catalog__icon">
-													<i class="_icon-catalog1"></i>
-												</div>
-												<p>Штрихкодирование</p>
+											<button type="submit" class="catalog__title _tab-active _icon-catalog1">
+												Штрихкодирование
 											</button>
-											<button type="submit" class="catalog__title">
-												<div class="catalog__icon">
-													<i class="_icon-catalog2"></i>
-												</div>
-												<p>POS-оборудование</p>
+											<button type="submit" class="catalog__title _icon-catalog2">
+												POS-оборудование
 											</button>
-											<button type="submit" class="catalog__title">
-												<div class="catalog__icon">
-													<i class="_icon-catalog3"></i>
-												</div>
-												<p>Весвоое оборудование</p>
+											<button type="submit" class="catalog__title _icon-catalog3">
+												Весвоое оборудование
 											</button>
-											<button type="submit" class="catalog__title">
-												<div class="catalog__icon">
-													<i class="_icon-catalog4"></i>
-												</div>
-												<p>Упаковочное оборудование</p>
+											<button type="submit" class="catalog__title _icon-catalog4">
+												Упаковочное оборудование
 											</button>
-											<button type="submit" class="catalog__title">
-												<div class="catalog__icon">
-													<i class="_icon-catalog5"></i>
-												</div>
-												<p>Кассовое оборудование</p>
+											<button type="submit" class="catalog__title _icon-catalog5">
+												Кассовое оборудование
 											</button>
-											<button type="submit" class="catalog__title">
-												<div class="catalog__icon">
-													<i class="_icon-catalog6"></i>
-												</div>
-												<p>Банковское оборудование</p>
+											<button type="submit" class="catalog__title _icon-catalog6">
+												Банковское оборудование
 											</button>
-											<button type="submit" class="catalog__title">
-												<div class="catalog__icon">
-													<i class="_icon-catalog7"></i>
-												</div>
-												<p>Мебельное оборудование</p>
+											<button type="submit" class="catalog__title _icon-catalog7">
+												Мебельное оборудование
 											</button>
-											<button type="submit" class="catalog__title">
-												<div class="catalog__icon">
-													<i class="_icon-catalog8"></i>
-												</div>
-												<p>Этикетки</p>
+											<button type="submit" class="catalog__title _icon-catalog8">
+												Этикетки
 											</button>
-											<button type="submit" class="catalog__title">
-												<div class="catalog__icon">
-													<i class="_icon-catalog9"></i>
-												</div>
-												<p>Расходные материалы</p>
+											<button type="submit" class="catalog__title _icon-catalog9">
+												Расходные материалы
 											</button>
-											<button type="submit" class="catalog__title">
-												<div class="catalog__icon">
-													<i class="_icon-catalog10"></i>
-												</div>
-												<p>Услуги типографии</p>
+											<button type="submit" class="catalog__title _icon-catalog10">
+												Услуги типографии
 											</button>
 										</nav>
 										<div data-tabs-body class="catalog__content">
@@ -436,26 +396,16 @@
 									</p>
 									<div class="catalog__recom-main">
 										<div class="catalog__card">
-											<div class="catalog__card-img">
-												<picture><source srcset="img/goods/1.webp" type="image/webp"><img src="img/goods/1.png" alt="Zebra ZT610"></picture>
-											</div>
+											<picture><source srcset="img/blocks/3.webp" type="image/webp"><img class="catalog__card-img" src="img/blocks/3.png" alt="Zebra ZT610"></picture>
 											<p class="catalog__card-title">Zebra ZT610</p>
 											<p class="catalog__card-price"><span>15 000</span> ₽</p>
-											<a href="#" class="catalog__card-cart">
-												<i class="_icon-cart"></i>
-												<p>В корзину</p>
-											</a>
+											<a href="#" class="catalog__card-cart _icon-cart">В корзину</a>
 										</div>
 										<div class="catalog__card">
-											<div class="catalog__card-img">
-												<picture><source srcset="img/goods/2.webp" type="image/webp"><img src="img/goods/2.png" alt="TSC TA 310"></picture>
-											</div>
+											<picture><source srcset="img/goods/2.webp" type="image/webp"><img class="catalog__card-img" src="img/goods/2.png" alt="TSC TA 310"></picture>
 											<p class="catalog__card-title">TSC TA 310</p>
 											<p class="catalog__card-price"><span>15 000</span> ₽</p>
-											<a href="#" class="catalog__card-cart">
-												<i class="_icon-cart"></i>
-												<p>В корзину</p>
-											</a>
+											<a href="#" class="catalog__card-cart _icon-cart">В корзину</a>
 										</div>
 									</div>
 								</div>
@@ -476,119 +426,60 @@
 		</header>
 		<div class="mobile-menu">
 			<div class="mobile-menu__wrapper">
-				<a href="index.html" class="mobile-menu__block">
-					<div class="mobile-menu__icon">
-						<i class="_icon-home"></i>
-					</div>
-					<div class="mobile-menu__text">
-						Главная
-					</div>
-				</a>
-				<div class="mobile-menu__block mobile-menu__block--catalog">
-					<div class="mobile-menu__icon">
-						<i class="_icon-catalog"></i>
-					</div>
-					<div class="mobile-menu__text">
-						Каталог
-					</div>
+				<a href="index.html" class="mobile-menu__block _icon-home">Главная</a>
+				<div class="mobile-menu__block mobile-menu__block--catalog _icon-catalog">
+					Каталог
 				</div>
-				<a href="#" class="mobile-menu__block">
-					<div class="mobile-menu__icon">
-						<i class="_icon-cart"></i>
-					</div>
-					<div class="mobile-menu__text">
-						Корзина
-					</div>
+				<a href="#" class="mobile-menu__block _icon-cart">
+					Корзина
 				</a>
-				<a href="#" class="mobile-menu__block">
-					<div class="mobile-menu__icon">
-						<i class="_icon-heart"></i>
-					</div>
-					<div class="mobile-menu__text">
-						Избранное
-					</div>
+				<a href="#" class="mobile-menu__block _icon-heart">
+					Избранное
 				</a>
-				<a href="#" class="mobile-menu__block">
-					<div class="mobile-menu__icon">
-						<i class="_icon-more"></i>
-					</div>
-					<div class="mobile-menu__text">
-						Больше
-					</div>
+				<a href="#" class="mobile-menu__block _icon-more">
+					Больше
 				</a>
 			</div>
 			<div class="mobile-menu__catalog">
 				<nav class="catalog__navigation catalog__navigation--mobile">
-					<div class="mobile-menu__catalog-title">
+					<p class="mobile-menu__catalog-title">
 						Каталог
-					</div>
-					<button data-parent="1" type="submit" class="catalog__title">
-						<div class="catalog__icon">
-							<i class="_icon-catalog1"></i>
-						</div>
-						<p>Штрихкодирование</p>
+					</p>
+					<button data-parent="1" type="submit" class="catalog__title _icon-catalog1">
+						Штрихкодирование
 					</button>
-					<button data-parent="2" type="submit" class="catalog__title">
-						<div class="catalog__icon">
-							<i class="_icon-catalog2"></i>
-						</div>
-						<p>POS-оборудование</p>
+					<button data-parent="2" type="submit" class="catalog__title _icon-catalog2">
+						POS-оборудование
 					</button>
-					<button data-parent="3" type="submit" class="catalog__title">
-						<div class="catalog__icon">
-							<i class="_icon-catalog3"></i>
-						</div>
-						<p>Весвоое оборудование</p>
+					<button data-parent="3" type="submit" class="catalog__title _icon-catalog3">
+						Весвоое оборудование
 					</button>
-					<button data-parent="4" type="submit" class="catalog__title">
-						<div class="catalog__icon">
-							<i class="_icon-catalog4"></i>
-						</div>
-						<p>Упаковочное оборудование</p>
+					<button data-parent="4" type="submit" class="catalog__title _icon-catalog4">
+						Упаковочное оборудование
 					</button>
-					<button data-parent="5" type="submit" class="catalog__title">
-						<div class="catalog__icon">
-							<i class="_icon-catalog5"></i>
-						</div>
-						<p>Кассовое оборудование</p>
+					<button data-parent="5" type="submit" class="catalog__title _icon-catalog5">
+						Кассовое оборудование
 					</button>
-					<button data-parent="6" type="submit" class="catalog__title">
-						<div class="catalog__icon">
-							<i class="_icon-catalog6"></i>
-						</div>
-						<p>Банковское оборудование</p>
+					<button data-parent="6" type="submit" class="catalog__title _icon-catalog6">
+						Банковское оборудование
 					</button>
-					<button data-parent="7" type="submit" class="catalog__title">
-						<div class="catalog__icon">
-							<i class="_icon-catalog7"></i>
-						</div>
-						<p>Мебельное оборудование</p>
+					<button data-parent="7" type="submit" class="catalog__title _icon-catalog7">
+						Мебельное оборудование
 					</button>
-					<button data-parent="8" type="submit" class="catalog__title">
-						<div class="catalog__icon">
-							<i class="_icon-catalog8"></i>
-						</div>
-						<p>Этикетки</p>
+					<button data-parent="8" type="submit" class="catalog__title _icon-catalog8">
+						Этикетки
 					</button>
-					<button data-parent="9" type="submit" class="catalog__title">
-						<div class="catalog__icon">
-							<i class="_icon-catalog9"></i>
-						</div>
-						<p>Расходные материалы</p>
+					<button data-parent="9" type="submit" class="catalog__title _icon-catalog9">
+						Расходные материалы
 					</button>
-					<button data-parent="10" type="submit" class="catalog__title">
-						<div class="catalog__icon">
-							<i class="_icon-catalog10"></i>
-						</div>
-						<p>Услуги типографии</p>
+					<button data-parent="10" type="submit" class="catalog__title _icon-catalog10">
+						Услуги типографии
 					</button>
 				</nav>
 				<div class="catalog__content">
 					<div data-child="1" class="catalog__body">
 						<div class="catalog__submenu-title">
-							<div class="mobile-menu__back">
-								<i class="_icon-arrow-d"></i>
-							</div>
+							<div class="mobile-menu__back _icon-arrow-d"></div>
 							<p>Штрихкодирование</p>
 						</div>
 						<ul class="catalog__ul">
@@ -614,9 +505,7 @@
 					</div>
 					<div data-child="2" class="catalog__body">
 						<div class="catalog__submenu-title">
-							<div class="mobile-menu__back">
-								<i class="_icon-arrow-d"></i>
-							</div>
+							<div class="mobile-menu__back _icon-arrow-d"></div>
 							<p>POS-оборудование</p>
 						</div>
 						<ul class="catalog__ul">
@@ -633,9 +522,7 @@
 					</div>
 					<div data-child="3" class="catalog__body">
 						<div class="catalog__submenu-title">
-							<div class="mobile-menu__back">
-								<i class="_icon-arrow-d"></i>
-							</div>
+							<div class="mobile-menu__back _icon-arrow-d"></div>
 							<p>Весвоое оборудование</p>
 						</div>
 						<ul class="catalog__ul">
@@ -661,9 +548,7 @@
 					</div>
 					<div data-child="4" class="catalog__body">
 						<div class="catalog__submenu-title">
-							<div class="mobile-menu__back">
-								<i class="_icon-arrow-d"></i>
-							</div>
+							<div class="mobile-menu__back _icon-arrow-d"></div>
 							<p>Упаковочное оборудование</p>
 						</div>
 						<ul class="catalog__ul">
@@ -686,9 +571,7 @@
 					</div>
 					<div data-child="5" class="catalog__body">
 						<div class="catalog__submenu-title">
-							<div class="mobile-menu__back">
-								<i class="_icon-arrow-d"></i>
-							</div>
+							<div class="mobile-menu__back _icon-arrow-d"></div>
 							<p>Кассовое оборудование</p>
 						</div>
 						<ul class="catalog__ul">
@@ -714,9 +597,7 @@
 					</div>
 					<div data-child="6" class="catalog__body">
 						<div class="catalog__submenu-title">
-							<div class="mobile-menu__back">
-								<i class="_icon-arrow-d"></i>
-							</div>
+							<div class="mobile-menu__back _icon-arrow-d"></div>
 							<p>Банковское оборудование</p>
 						</div>
 						<ul class="catalog__ul">
@@ -742,9 +623,7 @@
 					</div>
 					<div data-child="7" class="catalog__body">
 						<div class="catalog__submenu-title">
-							<div class="mobile-menu__back">
-								<i class="_icon-arrow-d"></i>
-							</div>
+							<div class="mobile-menu__back _icon-arrow-d"></div>
 							<p>Мебельное оборудование</p>
 						</div>
 						<ul class="catalog__ul">
@@ -770,9 +649,7 @@
 					</div>
 					<div data-child="8" class="catalog__body">
 						<div class="catalog__submenu-title">
-							<div class="mobile-menu__back">
-								<i class="_icon-arrow-d"></i>
-							</div>
+							<div class="mobile-menu__back _icon-arrow-d"></div>
 							<p>Этикетки</p>
 						</div>
 						<ul class="catalog__ul">
@@ -798,9 +675,7 @@
 					</div>
 					<div data-child="9" class="catalog__body">
 						<div class="catalog__submenu-title">
-							<div class="mobile-menu__back">
-								<i class="_icon-arrow-d"></i>
-							</div>
+							<div class="mobile-menu__back _icon-arrow-d"></div>
 							<p>Расходные материалы</p>
 						</div>
 						<ul class="catalog__ul">
@@ -826,9 +701,7 @@
 					</div>
 					<div data-child="10" class="catalog__body">
 						<div class="catalog__submenu-title">
-							<div class="mobile-menu__back">
-								<i class="_icon-arrow-d"></i>
-							</div>
+							<div class="mobile-menu__back _icon-arrow-d"></div>
 							<p>Услуги типографии</p>
 						</div>
 						<ul class="catalog__ul">
@@ -864,9 +737,6 @@
 								<span>Торговое оборудование</span>
 								<span class="main__h1-bold">для бизнеса</span>
 							</h1>
-							<div class="main__small-img">
-								<picture><source srcset="img/main/bg.webp" type="image/webp"><img src="img/main/bg.png" alt="Терминал"></picture>
-							</div>
 							<a href="#" class="main__btn">
 								Узнать подробнее
 							</a>
@@ -920,111 +790,71 @@
 					</div>
 				</div>
 				<div class="main__img">
-					<picture><source srcset="img/main/bg.webp" type="image/webp"><img src="img/main/bg.png" alt="Оплата"></picture>
+					<picture><source srcset="img/main/bg.webp" type="image/webp"><img src="img/main/bg.png" class="main__small-img" data-da=".main__body,900,1" alt="Оплата"></picture>
 				</div>
 			</section>
 			<section class="blocks">
 				<div class="blocks__container">
 					<div class="blocks__wrapper">
 						<a href="#" class="blocks__block">
-							<div class="blocks__img">
-								<picture><source srcset="img/blocks/1.webp" type="image/webp"><img src="img/blocks/1.png" alt="Принтеры этикеток"></picture>
-							</div>
-							<div class="blocks__text-wrapper">
-								<p class="blocks__text">
-									Принтеры этикеток
-								</p>
-							</div>
+							<picture><source srcset="img/blocks/1.webp" type="image/webp"><img class="blocks__img" src="img/blocks/1.png" alt="Принтеры этикеток"></picture>
+							<p class="blocks__text">
+								Принтеры этикеток
+							</p>
 						</a>
 						<a href="#" class="blocks__block">
-							<div class="blocks__img">
-								<picture><source srcset="img/blocks/2.webp" type="image/webp"><img src="img/blocks/2.png" alt="POS-терминалы"></picture>
-							</div>
-							<div class="blocks__text-wrapper">
-								<p class="blocks__text">
-									POS-терминалы
-								</p>
-							</div>
+							<picture><source srcset="img/blocks/2.webp" type="image/webp"><img class="blocks__img" src="img/blocks/2.png" alt="POS-терминалы"></picture>
+							<p class="blocks__text">
+								POS-терминалы
+							</p>
 						</a>
 						<a href="#" class="blocks__block blocks__block--tall">
-							<div class="blocks__img">
-								<picture><source srcset="img/blocks/3.webp" type="image/webp"><img src="img/blocks/3.png" alt="Сканеры штрих-кода"></picture>
-							</div>
-							<div class="blocks__text-wrapper">
-								<p class="blocks__text">
-									Сканеры штрих-кода
-								</p>
-							</div>
+							<picture><source srcset="img/blocks/3.webp" type="image/webp"><img class="blocks__img" src="img/blocks/3.png" alt="Сканеры штрих-кода"></picture>
+							<p class="blocks__text">
+								Сканеры штрих-кода
+							</p>
 						</a>
 						<a href="#" class="blocks__block">
-							<div class="blocks__img">
-								<picture><source srcset="img/blocks/4.webp" type="image/webp"><img src="img/blocks/4.png" alt="Электронные весы"></picture>
-							</div>
-							<div class="blocks__text-wrapper">
-								<p class="blocks__text">
-									Электронные весы
-								</p>
-							</div>
+							<picture><source srcset="img/blocks/4.webp" type="image/webp"><img class="blocks__img" src="img/blocks/4.png" alt="Электронные весы"></picture>
+							<p class="blocks__text">
+								Электронные весы
+							</p>
 						</a>
 						<a href="#" class="blocks__block blocks__block--wide">
-							<div class="blocks__img">
-								<picture><source srcset="img/blocks/5.webp" type="image/webp"><img src="img/blocks/5.png" alt="Кассовое оборудование"></picture>
-							</div>
-							<div class="blocks__text-wrapper">
-								<p class="blocks__text">
-									Кассовое оборудование
-								</p>
-							</div>
+							<picture><source srcset="img/blocks/5.webp" type="image/webp"><img class="blocks__img" src="img/blocks/5.png" alt="Кассовое оборудование"></picture>
+							<p class="blocks__text">
+								Кассовое оборудование
+							</p>
 						</a>
 						<a href="#" class="blocks__block">
-							<div class="blocks__img">
-								<picture><source srcset="img/blocks/6.webp" type="image/webp"><img src="img/blocks/6.png" alt="Риббоны"></picture>
-							</div>
-							<div class="blocks__text-wrapper">
-								<p class="blocks__text">
-									Риббоны
-								</p>
-							</div>
+							<picture><source srcset="img/blocks/6.webp" type="image/webp"><img class="blocks__img" src="img/blocks/6.png" alt="Риббоны"></picture>
+							<p class="blocks__text">
+								Риббоны
+							</p>
 						</a>
 						<a href="#" class="blocks__block">
-							<div class="blocks__img">
-								<picture><source srcset="img/blocks/7.webp" type="image/webp"><img src="img/blocks/7.png" alt="Этикетки"></picture>
-							</div>
-							<div class="blocks__text-wrapper">
-								<p class="blocks__text">
-									Этикетки
-								</p>
-							</div>
+							<picture><source srcset="img/blocks/7.webp" type="image/webp"><img class="blocks__img" src="img/blocks/7.png" alt="Этикетки"></picture>
+							<p class="blocks__text">
+								Этикетки
+							</p>
 						</a>
 						<a href="#" class="blocks__block">
-							<div class="blocks__img">
-								<picture><source srcset="img/blocks/8.webp" type="image/webp"><img src="img/blocks/8.png" alt="Диспенсеры"></picture>
-							</div>
-							<div class="blocks__text-wrapper">
-								<p class="blocks__text">
-									Диспенсеры
-								</p>
-							</div>
+							<picture><source srcset="img/blocks/8.webp" type="image/webp"><img class="blocks__img" src="img/blocks/8.png" alt="Диспенсеры"></picture>
+							<p class="blocks__text">
+								Диспенсеры
+							</p>
 						</a>
 						<a href="#" class="blocks__block">
-							<div class="blocks__img">
-								<picture><source srcset="img/blocks/9.webp" type="image/webp"><img src="img/blocks/9.png" alt="Терминалы сбора данных"></picture>
-							</div>
-							<div class="blocks__text-wrapper">
-								<p class="blocks__text">
-									Терминалы сбора данных
-								</p>
-							</div>
+							<picture><source srcset="img/blocks/9.webp" type="image/webp"><img class="blocks__img" src="img/blocks/9.png" alt="Терминалы сбора данных"></picture>
+							<p class="blocks__text">
+								Терминалы сбора данных
+							</p>
 						</a>
 						<a href="#" class="blocks__block">
-							<div class="blocks__img">
-								<picture><source srcset="img/blocks/10.webp" type="image/webp"><img src="img/blocks/10.png" alt="Печать этикеток"></picture>
-							</div>
-							<div class="blocks__text-wrapper">
-								<p class="blocks__text">
-									Печать этикеток
-								</p>
-							</div>
+							<picture><source srcset="img/blocks/10.webp" type="image/webp"><img class="blocks__img" src="img/blocks/10.png" alt="Печать этикеток"></picture>
+							<p class="blocks__text">
+								Печать этикеток
+							</p>
 						</a>
 					</div>
 				</div>
@@ -1190,7 +1020,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220826144850"></script>
+	<script src="js/app.min.js?_v=20220826222405"></script>
 	<script>
 		let customInput = document.querySelector(".customInput");
 		let selectedData = document.querySelector(".selectedData");
