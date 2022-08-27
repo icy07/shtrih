@@ -5,7 +5,7 @@
 	<title>Главная</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20220826222405">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220827141728">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -859,6 +859,73 @@
 					</div>
 				</div>
 			</section>
+			<section class="popular">
+				<div class="popular__nav">
+					<h2 class="popular__title title">Популярные товары</h2>
+					<ul class="popular__ul">
+						<li data-f="all" class="popular__li _active">Все</li>
+						<li data-f="sale" class="popular__li">Акции</li>
+						<li data-f="new" class="popular__li">Новинки</li>
+						<li data-f="hit" class="popular__li">Хиты</li>
+					</ul>
+				</div>
+				<div class="popular__main">
+					<div class="popular__card card card--tag card--hit">
+						<button class="card__fav _icon-heart"></button>
+						<a href="#" class="card__img">
+							<picture><source srcset="img/card/1.webp" type="image/webp"><img src="img/card/1.png" alt="Zebra"></picture>
+						</a>
+						<p class="card__article">Артикул: 347294142637</p>
+						<div class="card__bottom">
+							<a href="#" class="card__title">Zebra ZT610</a>
+							<div class="card__price-block">
+								<p class="card__price">15 000 ₽</p>
+								<p class="card__old-price">15 000 ₽</p>
+							</div>
+							<button class="card__btn _icon-cart">В корзину</button>
+						</div>
+					</div>
+					<div class="popular__card card card--tag card--sale">
+						<button class="card__fav _icon-heart"></button>
+						<a href="#" class="card__img">
+							<picture><source srcset="img/card/2.webp" type="image/webp"><img src="img/card/2.png" alt="TSC TA310"></picture>
+						</a>
+						<p class="card__article">Артикул: 347294142637</p>
+						<div class="card__bottom">
+							<a href="#" class="card__title">Zebra ZT610</a>
+							<button class="card__btn">Оформить предзаказ</button>
+						</div>
+					</div>
+					<div class="popular__card card card--tag card--new">
+						<button class="card__fav _icon-heart"></button>
+						<a href="#" class="card__img">
+							<picture><source srcset="img/card/1.webp" type="image/webp"><img src="img/card/1.png" alt="Zebra"></picture>
+						</a>
+						<p class="card__article">Артикул: 347294142637</p>
+						<div class="card__bottom">
+							<a href="#" class="card__title">Zebra ZT610</a>
+							<div class="card__price-block">
+								<p class="card__price">15 000 ₽</p>
+							</div>
+							<button class="card__btn _icon-cart">В корзину</button>
+						</div>
+					</div>
+					<div class="popular__card card">
+						<button class="card__fav _icon-heart"></button>
+						<a href="#" class="card__img">
+							<picture><source srcset="img/card/2.webp" type="image/webp"><img src="img/card/2.png" alt="TSC TA310"></picture>
+						</a>
+						<p class="card__article">Артикул: 347294142637</p>
+						<div class="card__bottom">
+							<a href="#" class="card__title">Zebra ZT610</a>
+							<div class="card__price-block">
+								<p class="card__price">15 000 ₽</p>
+							</div>
+							<button class="card__btn">Оформить предзаказ</button>
+						</div>
+					</div>
+				</div>
+			</section>
 			<section class="info-steps">
 				<div class="info-steps__container">
 					<div class="info-steps__body">
@@ -1020,7 +1087,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220826222405"></script>
+	<script src="js/app.min.js?_v=20220827141728"></script>
 	<script>
 		let customInput = document.querySelector(".customInput");
 		let selectedData = document.querySelector(".selectedData");

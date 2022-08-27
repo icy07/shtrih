@@ -7424,6 +7424,7 @@
         const navMenu = document.querySelector(".header__catalog-menu");
         const mobileBtn = document.querySelector(".mobile-menu__block--catalog");
         const mobileCatalog = document.querySelector(".mobile-menu__catalog");
+        const popularCards = document.querySelectorAll(".popular__card");
         if (navBtn) document.addEventListener("click", clickEvents);
         function clickEvents(e) {
             const targetElement = e.target;
@@ -7452,6 +7453,17 @@
                 targetElement.closest(".catalog__body").classList.remove("_activeItem");
                 catalogNav.classList.remove("_hide");
                 e.preventDefault();
+            }
+            if (targetElement.closest(".popular__li")) {
+                let filterClass = targetElement.dataset["f"];
+                targetElement.classList.add("_active");
+                targetElement.closest(".popular__ul").querySelectorAll("li").forEach((li => {
+                    if (targetElement != li) li.classList.remove("_active");
+                }));
+                popularCards.forEach((elem => {
+                    elem.classList.remove("_hide");
+                    if (!elem.classList.contains(`card--${filterClass}`) && "all" !== filterClass) elem.classList.add("_hide");
+                }));
             }
         }
         if (document.documentElement.clientWidth <= 520) {
