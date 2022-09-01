@@ -5,7 +5,7 @@
 	<title>Главная</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20220828143021">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220901165242">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -1226,27 +1226,27 @@
 						</p>
 						<form action="#" class="questions__form">
 							<div class="questions__form-block">
-								<input autocomplete="off" type="text" name="form[]" data-required placeholder="Имя" class="input questions__input">
-								<input autocomplete="off" type="text" name="form[]" data-required placeholder="+3 (9__)___-__-__" class="input questions__input input--phone">
+								<input autocomplete="off" type="text" name="questions" data-required placeholder="Имя" class="input questions__input">
+								<input autocomplete="off" type="text" name="questions" data-required placeholder="+3 (9__)___-__-__" class="input questions__input input--phone">
 								<input type="submit" class="questions__btn-send blue-btn" value="Отправить заявку">
 							</div>
 							<div class="questions__opts">
 								<p>Предпочтительный мессенджер:</p>
 								<div class="questions__options options">
 									<label class="options__label">
-										<input class="options__input" hidden checked type="radio" value="Телеграм" name="option">
+										<input class="options__input" hidden checked type="radio" value="Телеграм" name="questions">
 										<span class="options__text">
 											Телеграм
 										</span>
 									</label>
 									<label class="options__label">
-										<input class="options__input" hidden type="radio" value="WhatsApp" name="option">
+										<input class="options__input" hidden type="radio" value="WhatsApp" name="questions">
 										<span class="options__text">
 											WhatsApp
 										</span>
 									</label>
 									<label class="options__label">
-										<input class="options__input" hidden type="radio" value="Viber" name="option">
+										<input class="options__input" hidden type="radio" value="Viber" name="questions">
 										<span class="options__text">
 											Viber
 										</span>
@@ -1255,13 +1255,13 @@
 							</div>
 							<div class="questions__chk checkbox">
 								<label class="checkbox__label">
-									<input class="checkbox__input" checked type="checkbox" value="Прислать прайс-лист" name="form[]">
+									<input class="checkbox__input" checked type="checkbox" value="Прислать прайс-лист" name="questions">
 									<span class="checkbox__text">
 										Прислать прайс-лист
 									</span>
 								</label>
 								<label class="checkbox__label">
-									<input class="checkbox__input" data-required type="checkbox" value="Я согласен с политикой" name="form[]">
+									<input class="checkbox__input" data-required type="checkbox" value="Я согласен с политикой" name="questions">
 									<span class="checkbox__text">
 										<span>Я ознакомлен и согласен с <a href="#">политикой конфиденциальности</a></span>
 									</span>
@@ -1494,9 +1494,141 @@
 					</div>
 				</div>
 			</section>
+			<section class="order-eq">
+				<div class="order-eq__container">
+					<div class="order-eq__body">
+						<div class="order-eq__text-block">
+							<p class="order-eq__title">
+								Заказать спецтехнику в Калининграде
+							</p>
+							<p class="order-eq__text">
+								Подробно опишите ваше задачу и специалист поберёт самую подходящую технику. От этого зависит
+								стоимость и качество работы
+								на вашем объекте.
+							</p>
+							<a href="#" class="order-eq__btn blue-btn">Оставить заявку | или</a>
+						</div>
+						<div class="order-eq__img">
+							<picture><source srcset="img/equip.webp" type="image/webp"><img src="img/equip.png" alt="Заказать спецтехнику"></picture>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="subscribe">
+				<div class="subscribe__container">
+					<p class="subscribe__title">
+						Подпишитесь
+						на наши новости
+					</p>
+					<form action="#" class="subscribe__form">
+						<div class="subscribe__inps">
+							<input autocomplete="off" type="text" name="subscribtion" data-required="email" placeholder="Ваш e-mail" class="input subscribe__input">
+							<input type="submit" class="subscribe__btn-send blue-btn" value="Отправить заявку">
+						</div>
+						<label class="checkbox__label">
+							<input class="checkbox__input" data-required type="checkbox" value="Я согласен с политикой" name="subscribtion">
+							<span class="checkbox__text">
+								<span>Даю согласие на обработку <a href="#">персональных данных</a></span>
+							</span>
+						</label>
+					</form>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
-			<div class="footer__container">
+			<div class="footer__top">
+				<div class="footer__container">
+					<div class="footer__block">
+						<a href="index.html" class="footer__logo">
+							<p>LOGO</p>
+							<p>Принтеры этикетов, сканеры <br> штрих-кода, риббоны, этикетки</p>
+						</a>
+					</div>
+					<div class="footer__block footer__block--ul">
+						<div data-spollers="400" class="footer__spoiler">
+							<div class="footer__spoiler-item">
+								<p data-spoller class="footer__spoiler-title">Каталог</p>
+								<div class="footer__spoiler-body footer__spoiler-body--ul">
+									<div class="footer__body-wrapper">
+										<ul class="footer__ul">
+											<li><a href="#">Штрихкодирование</a></li>
+											<li><a href="#">POS-оборудование</a></li>
+											<li><a href="#">Весовое оборудование</a></li>
+											<li><a href="#">Упаковочное оборудование</a></li>
+											<li><a href="#">Кассовое оборудование</a></li>
+										</ul>
+										<ul class="footer__ul">
+											<li><a href="#">Банковское оборудование</a></li>
+											<li><a href="#">Мебельное оборудование</a></li>
+											<li><a href="#">Этикетки</a></li>
+											<li><a href="#">Расходные материалы</a></li>
+											<li><a href="#">Услуги типографии</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="footer__block footer__block--ul">
+						<div data-spollers="400" class="footer__spoiler">
+							<div class="footer__spoiler-item">
+								<p data-spoller class="footer__spoiler-title">Информация</p>
+								<div class="footer__spoiler-body footer__spoiler-body--ul">
+									<div class="footer__body-wrapper">
+										<ul class="footer__ul">
+											<li><a href="#">Акции</a></li>
+											<li><a href="#">Доставка</a></li>
+											<li><a href="#">Оплата</a></li>
+											<li><a href="#">Контакты</a></li>
+											<li><a href="#">Новости</a></li>
+										</ul>
+										<ul class="footer__ul">
+											<li><a href="#">Егалис</a></li>
+											<li><a href="#">Автоматизация</a></li>
+											<li><a href="#">Услуги</a></li>
+											<li><a href="#">Условия гарантии</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="footer__block footer__block--contacts">
+						<div data-spollers="400" class="footer__spoiler">
+							<div class="footer__spoiler-item">
+								<p data-spoller class="footer__spoiler-title">Контакты</p>
+								<div class="footer__spoiler-body footer__contacts">
+									<a href="tel:84955674380" class="footer__contact _icon-phone">8-495-567-43-80</a>
+									<p class="footer__contact _icon-clock">с 9:00 - 18:00 (Пн-Пт)</p>
+									<a href="#" class="footer__contact _icon-mail">@gmail.com</a>
+									<p class="footer__contact _icon-location">г.Москва</p>
+									<a href="#" class="footer__callback">Обратный звонок</a>
+								</div>
+							</div>
+						</div>
+						<div class="footer__messangers">
+							<a href="#" class="footer__messanger">
+								<i class="_icon-tg"></i>
+							</a>
+							<a href="#" class="footer__messanger">
+								<i class="_icon-viber"></i>
+							</a>
+							<a href="#" class="footer__messanger">
+								<i class="_icon-wa"></i>
+							</a>
+							<a href="#" class="footer__messanger">
+								<i class="_icon-mailru"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<div class="footer__container">
+					<p class="footer__bottom-text">@ Копирайтинг 2022</p>
+					<a href="#" class="footer__bottom-text">Карта сайта</a>
+					<a href="#" class="footer__bottom-text">Политика конфиденциальности</a>
+				</div>
 			</div>
 		</footer>
 	</div>
@@ -1513,13 +1645,13 @@
 							<p class="popup__input-text">
 								Введите ваше имя
 							</p>
-							<input autocomplete="off" type="text" name="form[]" data-required placeholder="Введите ваше имя" class="input popup__input input--icon">
+							<input autocomplete="off" type="text" name="send" data-required placeholder="Введите ваше имя" class="input popup__input input--icon">
 						</div>
 						<div class="popup__input-block popup__input-block--icon _icon-phone">
 							<p class="popup__input-text">
 								Введите ваш телефон
 							</p>
-							<input autocomplete="off" type="text" name="form[]" data-required placeholder="Введите ваш телефон" class="input popup__input input--icon input--phone">
+							<input autocomplete="off" type="text" name="send" data-required placeholder="Введите ваш телефон" class="input popup__input input--icon input--phone">
 						</div>
 						<input type="submit" class="popup__btn-send blue-btn" value="Отправить">
 					</form>
@@ -1550,25 +1682,25 @@
 							<p class="popup__input-text">
 								Имя
 							</p>
-							<input autocomplete="off" type="text" name="form[]" data-required placeholder="Имя" class="input popup__input">
+							<input autocomplete="off" type="text" name="request" data-required placeholder="Имя" class="input popup__input">
 						</div>
 						<div class="popup__input-block">
 							<p class="popup__input-text">
 								Телефон
 							</p>
-							<input autocomplete="off" type="text" name="form[]" data-required placeholder="Телефон" class="input popup__input input--phone">
+							<input autocomplete="off" type="text" name="request" data-required placeholder="Телефон" class="input popup__input input--phone">
 						</div>
 						<div class="popup__input-block">
 							<p class="popup__input-text">
 								E-mail
 							</p>
-							<input autocomplete="off" type="text" name="form[]" data-required="email" placeholder="E-mail" class="input popup__input">
+							<input autocomplete="off" type="text" name="request" data-required="email" placeholder="E-mail" class="input popup__input">
 						</div>
 						<div class="popup__input-block popup__input-block--file">
 							<p class="popup__input-text">
 								Прикрепить файлы
 							</p>
-							<input autocomplete="off" type="file" id="inputFile" name="form[]" data-required class="input--file" multiple>
+							<input autocomplete="off" type="file" id="inputFile" name="request" data-required class="input--file" multiple>
 							<label class="popup__file-wrapper" for="inputFile">
 								<div class="popup__file-fake" data-value="Прикрепить файлы">Прикрепить файлы</div>
 								<div class="popup__file-button _icon-plus">Выбрать файл</div>
@@ -1580,7 +1712,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220828143021"></script>
+	<script src="js/app.min.js?_v=20220901165242"></script>
 	<script>
 		let customInput = document.querySelector(".customInput");
 		let selectedData = document.querySelector(".selectedData");
