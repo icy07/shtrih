@@ -5,7 +5,7 @@
 	<title>Главная</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20220901165242">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220904210014">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -20,14 +20,16 @@
 								<div class="customInput">
 									<div class="selectedData _icon-location">г.Москва</div>
 								</div>
-								<div class="options">
+								<div class="options options-click">
 									<div class="searchInput">
 										<input type="text" id="searchInput" placeholder="Поиск">
 										<i class="_icon-search"></i>
 									</div>
 									<!-- Города указывать в тэге script снизу -->
-									<ul>
-									</ul>
+									<div class="sb-wrapper" data-simplebar>
+										<ul>
+										</ul>
+									</div>
 								</div>
 							</div>
 							<a href="tel:84955674380" class="header__phone" data-da=".menu__bottom-da,520,0">8-495-567-43-80</a>
@@ -795,67 +797,69 @@
 			</section>
 			<section class="blocks">
 				<div class="blocks__container">
-					<div class="blocks__wrapper">
-						<a href="#" class="blocks__block">
-							<picture><source srcset="img/blocks/1.webp" type="image/webp"><img class="blocks__img" src="img/blocks/1.png" alt="Принтеры этикеток"></picture>
-							<p class="blocks__text">
-								Принтеры этикеток
-							</p>
-						</a>
-						<a href="#" class="blocks__block">
-							<picture><source srcset="img/blocks/2.webp" type="image/webp"><img class="blocks__img" src="img/blocks/2.png" alt="POS-терминалы"></picture>
-							<p class="blocks__text">
-								POS-терминалы
-							</p>
-						</a>
-						<a href="#" class="blocks__block blocks__block--tall">
-							<picture><source srcset="img/blocks/3.webp" type="image/webp"><img class="blocks__img" src="img/blocks/3.png" alt="Сканеры штрих-кода"></picture>
-							<p class="blocks__text">
-								Сканеры штрих-кода
-							</p>
-						</a>
-						<a href="#" class="blocks__block">
-							<picture><source srcset="img/blocks/4.webp" type="image/webp"><img class="blocks__img" src="img/blocks/4.png" alt="Электронные весы"></picture>
-							<p class="blocks__text">
-								Электронные весы
-							</p>
-						</a>
-						<a href="#" class="blocks__block blocks__block--wide">
-							<picture><source srcset="img/blocks/5.webp" type="image/webp"><img class="blocks__img" src="img/blocks/5.png" alt="Кассовое оборудование"></picture>
-							<p class="blocks__text">
-								Кассовое оборудование
-							</p>
-						</a>
-						<a href="#" class="blocks__block">
-							<picture><source srcset="img/blocks/6.webp" type="image/webp"><img class="blocks__img" src="img/blocks/6.png" alt="Риббоны"></picture>
-							<p class="blocks__text">
-								Риббоны
-							</p>
-						</a>
-						<a href="#" class="blocks__block">
-							<picture><source srcset="img/blocks/7.webp" type="image/webp"><img class="blocks__img" src="img/blocks/7.png" alt="Этикетки"></picture>
-							<p class="blocks__text">
-								Этикетки
-							</p>
-						</a>
-						<a href="#" class="blocks__block">
-							<picture><source srcset="img/blocks/8.webp" type="image/webp"><img class="blocks__img" src="img/blocks/8.png" alt="Диспенсеры"></picture>
-							<p class="blocks__text">
-								Диспенсеры
-							</p>
-						</a>
-						<a href="#" class="blocks__block">
-							<picture><source srcset="img/blocks/9.webp" type="image/webp"><img class="blocks__img" src="img/blocks/9.png" alt="Терминалы сбора данных"></picture>
-							<p class="blocks__text">
-								Терминалы сбора данных
-							</p>
-						</a>
-						<a href="#" class="blocks__block">
-							<picture><source srcset="img/blocks/10.webp" type="image/webp"><img class="blocks__img" src="img/blocks/10.png" alt="Печать этикеток"></picture>
-							<p class="blocks__text">
-								Печать этикеток
-							</p>
-						</a>
+					<div class="sb-wrapper" data-simplebar>
+						<div class="blocks__wrapper">
+							<a href="#" class="blocks__block">
+								<picture><source srcset="img/blocks/1.webp" type="image/webp"><img class="blocks__img" src="img/blocks/1.png" alt="Принтеры этикеток"></picture>
+								<p class="blocks__text">
+									Принтеры этикеток
+								</p>
+							</a>
+							<a href="#" class="blocks__block">
+								<picture><source srcset="img/blocks/2.webp" type="image/webp"><img class="blocks__img" src="img/blocks/2.png" alt="POS-терминалы"></picture>
+								<p class="blocks__text">
+									POS-терминалы
+								</p>
+							</a>
+							<a href="#" class="blocks__block blocks__block--tall">
+								<picture><source srcset="img/blocks/3.webp" type="image/webp"><img class="blocks__img" src="img/blocks/3.png" alt="Сканеры штрих-кода"></picture>
+								<p class="blocks__text">
+									Сканеры штрих-кода
+								</p>
+							</a>
+							<a href="#" class="blocks__block">
+								<picture><source srcset="img/blocks/4.webp" type="image/webp"><img class="blocks__img" src="img/blocks/4.png" alt="Электронные весы"></picture>
+								<p class="blocks__text">
+									Электронные весы
+								</p>
+							</a>
+							<a href="#" class="blocks__block blocks__block--wide">
+								<picture><source srcset="img/blocks/5.webp" type="image/webp"><img class="blocks__img" src="img/blocks/5.png" alt="Кассовое оборудование"></picture>
+								<p class="blocks__text">
+									Кассовое оборудование
+								</p>
+							</a>
+							<a href="#" class="blocks__block">
+								<picture><source srcset="img/blocks/6.webp" type="image/webp"><img class="blocks__img" src="img/blocks/6.png" alt="Риббоны"></picture>
+								<p class="blocks__text">
+									Риббоны
+								</p>
+							</a>
+							<a href="#" class="blocks__block">
+								<picture><source srcset="img/blocks/7.webp" type="image/webp"><img class="blocks__img" src="img/blocks/7.png" alt="Этикетки"></picture>
+								<p class="blocks__text">
+									Этикетки
+								</p>
+							</a>
+							<a href="#" class="blocks__block">
+								<picture><source srcset="img/blocks/8.webp" type="image/webp"><img class="blocks__img" src="img/blocks/8.png" alt="Диспенсеры"></picture>
+								<p class="blocks__text">
+									Диспенсеры
+								</p>
+							</a>
+							<a href="#" class="blocks__block">
+								<picture><source srcset="img/blocks/9.webp" type="image/webp"><img class="blocks__img" src="img/blocks/9.png" alt="Терминалы сбора данных"></picture>
+								<p class="blocks__text">
+									Терминалы сбора данных
+								</p>
+							</a>
+							<a href="#" class="blocks__block">
+								<picture><source srcset="img/blocks/10.webp" type="image/webp"><img class="blocks__img" src="img/blocks/10.png" alt="Печать этикеток"></picture>
+								<p class="blocks__text">
+									Печать этикеток
+								</p>
+							</a>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -863,65 +867,67 @@
 				<div class="popular__nav">
 					<h2 class="popular__title title">Популярные товары</h2>
 					<ul class="popular__ul">
-						<li data-f="all" class="popular__li _active">Все</li>
-						<li data-f="sale" class="popular__li">Акции</li>
-						<li data-f="new" class="popular__li">Новинки</li>
-						<li data-f="hit" class="popular__li">Хиты</li>
+						<li class="popular__li"><button class="_active" data-f="all">Все</button></li>
+						<li class="popular__li"><button data-f="sale">Акции</button></li>
+						<li class="popular__li"><button data-f="new">Новинки</button></li>
+						<li class="popular__li"><button data-f="hit">Хиты</button></li>
 					</ul>
 				</div>
-				<div class="popular__main">
-					<div class="popular__card card card--tag card--hit">
-						<button class="card__fav _icon-heart"></button>
-						<a href="#" class="card__img">
-							<picture><source srcset="img/card/1.webp" type="image/webp"><img src="img/card/1.png" alt="Zebra"></picture>
-						</a>
-						<p class="card__article">Артикул: 347294142637</p>
-						<div class="card__bottom">
-							<a href="#" class="card__title">Zebra ZT610</a>
-							<div class="card__price-block">
-								<p class="card__price">15 000 ₽</p>
-								<p class="card__old-price">15 000 ₽</p>
+				<div class="sb-wrapper" data-simplebar>
+					<div class="popular__main">
+						<div class="popular__card card card--tag card--hit">
+							<button class="card__fav _icon-heart"></button>
+							<a href="#" class="card__img">
+								<picture><source srcset="img/card/1.webp" type="image/webp"><img src="img/card/1.png" alt="Zebra"></picture>
+							</a>
+							<p class="card__article">Артикул: 347294142637</p>
+							<div class="card__bottom">
+								<a href="#" class="card__title">Zebra ZT610</a>
+								<div class="card__price-block">
+									<p class="card__price">15 000 ₽</p>
+									<p class="card__old-price">15 000 ₽</p>
+								</div>
+								<button class="card__btn _icon-cart">В корзину</button>
 							</div>
-							<button class="card__btn _icon-cart">В корзину</button>
 						</div>
-					</div>
-					<div class="popular__card card card--tag card--sale">
-						<button class="card__fav _icon-heart"></button>
-						<a href="#" class="card__img">
-							<picture><source srcset="img/card/2.webp" type="image/webp"><img src="img/card/2.png" alt="TSC TA310"></picture>
-						</a>
-						<p class="card__article">Артикул: 347294142637</p>
-						<div class="card__bottom">
-							<a href="#" class="card__title">Zebra ZT610</a>
-							<button class="card__btn">Оформить предзаказ</button>
-						</div>
-					</div>
-					<div class="popular__card card card--tag card--new">
-						<button class="card__fav _icon-heart"></button>
-						<a href="#" class="card__img">
-							<picture><source srcset="img/card/1.webp" type="image/webp"><img src="img/card/1.png" alt="Zebra"></picture>
-						</a>
-						<p class="card__article">Артикул: 347294142637</p>
-						<div class="card__bottom">
-							<a href="#" class="card__title">Zebra ZT610</a>
-							<div class="card__price-block">
-								<p class="card__price">15 000 ₽</p>
+						<div class="popular__card card card--tag card--sale">
+							<button class="card__fav _icon-heart"></button>
+							<a href="#" class="card__img">
+								<picture><source srcset="img/card/2.webp" type="image/webp"><img src="img/card/2.png" alt="TSC TA310"></picture>
+							</a>
+							<p class="card__article">Артикул: 347294142637</p>
+							<div class="card__bottom">
+								<a href="#" class="card__title">Zebra ZT610</a>
+								<button class="card__btn">Оформить предзаказ</button>
 							</div>
-							<button class="card__btn _icon-cart">В корзину</button>
 						</div>
-					</div>
-					<div class="popular__card card">
-						<button class="card__fav _icon-heart"></button>
-						<a href="#" class="card__img">
-							<picture><source srcset="img/card/2.webp" type="image/webp"><img src="img/card/2.png" alt="TSC TA310"></picture>
-						</a>
-						<p class="card__article">Артикул: 347294142637</p>
-						<div class="card__bottom">
-							<a href="#" class="card__title">Zebra ZT610</a>
-							<div class="card__price-block">
-								<p class="card__price">15 000 ₽</p>
+						<div class="popular__card card card--tag card--new">
+							<button class="card__fav _icon-heart"></button>
+							<a href="#" class="card__img">
+								<picture><source srcset="img/card/1.webp" type="image/webp"><img src="img/card/1.png" alt="Zebra"></picture>
+							</a>
+							<p class="card__article">Артикул: 347294142637</p>
+							<div class="card__bottom">
+								<a href="#" class="card__title">Zebra ZT610</a>
+								<div class="card__price-block">
+									<p class="card__price">15 000 ₽</p>
+								</div>
+								<button class="card__btn _icon-cart">В корзину</button>
 							</div>
-							<button class="card__btn">Оформить предзаказ</button>
+						</div>
+						<div class="popular__card card">
+							<button class="card__fav _icon-heart"></button>
+							<a href="#" class="card__img">
+								<picture><source srcset="img/card/2.webp" type="image/webp"><img src="img/card/2.png" alt="TSC TA310"></picture>
+							</a>
+							<p class="card__article">Артикул: 347294142637</p>
+							<div class="card__bottom">
+								<a href="#" class="card__title">Zebra ZT610</a>
+								<div class="card__price-block">
+									<p class="card__price">15 000 ₽</p>
+								</div>
+								<button class="card__btn">Оформить предзаказ</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -943,7 +949,7 @@
 							</p>
 							<button data-showmore-button type="button" class="info-steps__more">
 								<span>Читать весь текст</span>
-								<span>Скыть</span>
+								<span>Скрыть</span>
 							</button>
 						</div>
 						<div class="info-steps__main">
@@ -1002,66 +1008,68 @@
 				</div>
 			</section>
 			<section class="services">
-				<h2 class="services__title title">
-					Услуги Shtrih.su
-				</h2>
-				<div class="services__main">
-					<div class="services__block services__block--1">
-						<div class="services__block-text">
-							<p>
-								Реклама <br>
-								на чековой ленте
-							</p>
-						</div>
-						<picture><source srcset="img/services/1.webp" type="image/webp"><img class="services__img" src="img/services/1.png" alt="Картинка"></picture>
-					</div>
-					<div class="services__block services__block--2">
-						<div class="services__block-text">
-							<p>
-								Печать этикеток <br>
-								на заказ
-							</p>
-						</div>
-						<picture><source srcset="img/services/2.webp" type="image/webp"><img class="services__img" src="img/services/2.png" alt="Картинка"></picture>
-					</div>
-					<div class="services__block services__block--3">
-						<div class="services__block-text">
-							<p>
-								Изготовление <br>
-								вшивных ярлыков
-							</p>
-						</div>
-						<picture><source srcset="img/services/3.webp" type="image/webp"><img class="services__img" src="img/services/3.png" alt="Картинка"></picture>
-					</div>
-					<div class="services__block services__block--4">
-						<div class="services__block-text">
-							<p>
-								Печать гарантийных <br>
-								этикеток на заказ
-							</p>
-						</div>
-						<picture><source srcset="img/services/4.webp" type="image/webp"><img class="services__img" src="img/services/4.png" alt="Картинка"></picture>
-					</div>
-					<div class="services__block services__block--5">
-						<div class="services__block-text">
-							<p>
-								Билеты <br>
-								на термокартоне
-							</p>
-						</div>
-						<picture><source srcset="img/services/5.webp" type="image/webp"><img class="services__img" src="img/services/5.png" alt="Картинка"></picture>
-					</div>
-					<div class="services__block services__block--6">
-						<div class="services__block-text">
-							<p>
-								Производство картонных <br>
-								и синтетических бирок
-							</p>
-						</div>
-						<picture><source srcset="img/services/6.webp" type="image/webp"><img class="services__img" src="img/services/6.png" alt="Картинка"></picture>
-					</div>
-				</div>
 				<div class="services__container">
+					<h2 class="services__title title">
+						Услуги Shtrih.su
+					</h2>
+					<div class="sb-wrapper" data-simplebar>
+						<div class="services__main">
+							<a href="#" class="services__block services__block--1">
+								<div class="services__block-text">
+									<p>
+										Реклама <br>
+										на чековой ленте
+									</p>
+								</div>
+								<picture><source srcset="img/services/1.webp" type="image/webp"><img class="services__img" src="img/services/1.png" alt="Картинка"></picture>
+							</a>
+							<a href="#" class="services__block services__block--2">
+								<div class="services__block-text">
+									<p>
+										Печать этикеток <br>
+										на заказ
+									</p>
+								</div>
+								<picture><source srcset="img/services/2.webp" type="image/webp"><img class="services__img" src="img/services/2.png" alt="Картинка"></picture>
+							</a>
+							<a href="#" class="services__block services__block--3">
+								<div class="services__block-text">
+									<p>
+										Изготовление <br>
+										вшивных ярлыков
+									</p>
+								</div>
+								<picture><source srcset="img/services/3.webp" type="image/webp"><img class="services__img" src="img/services/3.png" alt="Картинка"></picture>
+							</a>
+							<a href="#" class="services__block services__block--4">
+								<div class="services__block-text">
+									<p>
+										Печать гарантийных <br>
+										этикеток на заказ
+									</p>
+								</div>
+								<picture><source srcset="img/services/4.webp" type="image/webp"><img class="services__img" src="img/services/4.png" alt="Картинка"></picture>
+							</a>
+							<a href="#" class="services__block services__block--5">
+								<div class="services__block-text">
+									<p>
+										Билеты <br>
+										на термокартоне
+									</p>
+								</div>
+								<picture><source srcset="img/services/5.webp" type="image/webp"><img class="services__img" src="img/services/5.png" alt="Картинка"></picture>
+							</a>
+							<a href="#" class="services__block services__block--6">
+								<div class="services__block-text">
+									<p>
+										Производство картонных <br>
+										и синтетических бирок
+									</p>
+								</div>
+								<picture><source srcset="img/services/6.webp" type="image/webp"><img class="services__img" src="img/services/6.png" alt="Картинка"></picture>
+							</a>
+						</div>
+					</div>
 					<div data-showmore data-showmore-media="700,max" class="services__show-more">
 						<p data-showmore-content="60" class="services__text">
 							Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей
@@ -1077,7 +1085,7 @@
 						</p>
 						<button data-showmore-button type="button" class="services__more">
 							<span>Читать весь текст</span>
-							<span>Скыть</span>
+							<span>Скрыть</span>
 						</button>
 					</div>
 				</div>
@@ -1712,7 +1720,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220901165242"></script>
+	<script src="js/app.min.js?_v=20220904210014"></script>
 	<script>
 		let customInput = document.querySelector(".customInput");
 		let selectedData = document.querySelector(".selectedData");
