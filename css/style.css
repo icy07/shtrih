@@ -7543,6 +7543,11 @@ body::after {
   background-color: #3f78f4;
   color: #fff;
 }
+@media (any-hover: hover) {
+  .description__nav-title._tab-active:hover {
+    color: #fff;
+  }
+}
 @media (max-width: 38.75em) {
   .description__nav-title {
     display: flex;
