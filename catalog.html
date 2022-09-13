@@ -5,7 +5,7 @@
 	<title>Главная</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20220912204835">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220913211303">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -733,12 +733,27 @@
 			</div>
 		</div>
 		<main class="page">
-			<nav class="breadcrumbs">
+			<nav class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
 				<div class="breadcrumbs__container">
 					<ul>
-						<li><a href="index.html">Главная</a></li>
-						<li><a href="#">Каталог товаров</a></li>
-						<li>Детекторы валют</li>
+						<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+							<a href="index.html" itemprop="item">
+								<span itemprop="name">Главная</span>
+							</a>
+							<meta itemprop="position" content="1" />
+						</li>
+						<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+							<a href="#" itemprop="item">
+								<span itemprop="name">Каталог товаров</span>
+							</a>
+							<meta itemprop="position" content="2" />
+						</li>
+						<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+							<a href="catalog.html" itemprop="item">
+								<span itemprop="name">Детекторы валют</span>
+							</a>
+							<meta itemprop="position" content="3" />
+						</li>
 					</ul>
 				</div>
 			</nav>
@@ -2139,7 +2154,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220912204835"></script>
+	<script src="js/app.min.js?_v=20220913211303"></script>
 	<script>
 		let customInput = document.querySelector(".customInput");
 		let selectedData = document.querySelector(".selectedData");
