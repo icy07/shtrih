@@ -7791,6 +7791,26 @@
                 document.documentElement.classList.add(className);
             }));
         }
+        let isMobile = {
+            Android: function() {
+                return navigator.userAgent.match(/Android/i);
+            },
+            BlackBerry: function() {
+                return navigator.userAgent.match(/BlackBerry/i);
+            },
+            iOS: function() {
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+            },
+            Opera: function() {
+                return navigator.userAgent.match(/Opera Mini/i);
+            },
+            Windows: function() {
+                return navigator.userAgent.match(/IEMobile/i);
+            },
+            any: function() {
+                return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
+            }
+        };
         function functions_getHash() {
             if (location.hash) return location.hash.replace("#", "");
         }
@@ -12909,6 +12929,165 @@
                 update
             });
         }
+        function freeMode(_ref) {
+            let {swiper, extendParams, emit, once} = _ref;
+            extendParams({
+                freeMode: {
+                    enabled: false,
+                    momentum: true,
+                    momentumRatio: 1,
+                    momentumBounce: true,
+                    momentumBounceRatio: 1,
+                    momentumVelocityRatio: 1,
+                    sticky: false,
+                    minimumVelocity: .02
+                }
+            });
+            function onTouchStart() {
+                const translate = swiper.getTranslate();
+                swiper.setTranslate(translate);
+                swiper.setTransition(0);
+                swiper.touchEventsData.velocities.length = 0;
+                swiper.freeMode.onTouchEnd({
+                    currentPos: swiper.rtl ? swiper.translate : -swiper.translate
+                });
+            }
+            function onTouchMove() {
+                const {touchEventsData: data, touches} = swiper;
+                if (0 === data.velocities.length) data.velocities.push({
+                    position: touches[swiper.isHorizontal() ? "startX" : "startY"],
+                    time: data.touchStartTime
+                });
+                data.velocities.push({
+                    position: touches[swiper.isHorizontal() ? "currentX" : "currentY"],
+                    time: utils_now()
+                });
+            }
+            function onTouchEnd(_ref2) {
+                let {currentPos} = _ref2;
+                const {params, $wrapperEl, rtlTranslate: rtl, snapGrid, touchEventsData: data} = swiper;
+                const touchEndTime = utils_now();
+                const timeDiff = touchEndTime - data.touchStartTime;
+                if (currentPos < -swiper.minTranslate()) {
+                    swiper.slideTo(swiper.activeIndex);
+                    return;
+                }
+                if (currentPos > -swiper.maxTranslate()) {
+                    if (swiper.slides.length < snapGrid.length) swiper.slideTo(snapGrid.length - 1); else swiper.slideTo(swiper.slides.length - 1);
+                    return;
+                }
+                if (params.freeMode.momentum) {
+                    if (data.velocities.length > 1) {
+                        const lastMoveEvent = data.velocities.pop();
+                        const velocityEvent = data.velocities.pop();
+                        const distance = lastMoveEvent.position - velocityEvent.position;
+                        const time = lastMoveEvent.time - velocityEvent.time;
+                        swiper.velocity = distance / time;
+                        swiper.velocity /= 2;
+                        if (Math.abs(swiper.velocity) < params.freeMode.minimumVelocity) swiper.velocity = 0;
+                        if (time > 150 || utils_now() - lastMoveEvent.time > 300) swiper.velocity = 0;
+                    } else swiper.velocity = 0;
+                    swiper.velocity *= params.freeMode.momentumVelocityRatio;
+                    data.velocities.length = 0;
+                    let momentumDuration = 1e3 * params.freeMode.momentumRatio;
+                    const momentumDistance = swiper.velocity * momentumDuration;
+                    let newPosition = swiper.translate + momentumDistance;
+                    if (rtl) newPosition = -newPosition;
+                    let doBounce = false;
+                    let afterBouncePosition;
+                    const bounceAmount = 20 * Math.abs(swiper.velocity) * params.freeMode.momentumBounceRatio;
+                    let needsLoopFix;
+                    if (newPosition < swiper.maxTranslate()) {
+                        if (params.freeMode.momentumBounce) {
+                            if (newPosition + swiper.maxTranslate() < -bounceAmount) newPosition = swiper.maxTranslate() - bounceAmount;
+                            afterBouncePosition = swiper.maxTranslate();
+                            doBounce = true;
+                            data.allowMomentumBounce = true;
+                        } else newPosition = swiper.maxTranslate();
+                        if (params.loop && params.centeredSlides) needsLoopFix = true;
+                    } else if (newPosition > swiper.minTranslate()) {
+                        if (params.freeMode.momentumBounce) {
+                            if (newPosition - swiper.minTranslate() > bounceAmount) newPosition = swiper.minTranslate() + bounceAmount;
+                            afterBouncePosition = swiper.minTranslate();
+                            doBounce = true;
+                            data.allowMomentumBounce = true;
+                        } else newPosition = swiper.minTranslate();
+                        if (params.loop && params.centeredSlides) needsLoopFix = true;
+                    } else if (params.freeMode.sticky) {
+                        let nextSlide;
+                        for (let j = 0; j < snapGrid.length; j += 1) if (snapGrid[j] > -newPosition) {
+                            nextSlide = j;
+                            break;
+                        }
+                        if (Math.abs(snapGrid[nextSlide] - newPosition) < Math.abs(snapGrid[nextSlide - 1] - newPosition) || "next" === swiper.swipeDirection) newPosition = snapGrid[nextSlide]; else newPosition = snapGrid[nextSlide - 1];
+                        newPosition = -newPosition;
+                    }
+                    if (needsLoopFix) once("transitionEnd", (() => {
+                        swiper.loopFix();
+                    }));
+                    if (0 !== swiper.velocity) {
+                        if (rtl) momentumDuration = Math.abs((-newPosition - swiper.translate) / swiper.velocity); else momentumDuration = Math.abs((newPosition - swiper.translate) / swiper.velocity);
+                        if (params.freeMode.sticky) {
+                            const moveDistance = Math.abs((rtl ? -newPosition : newPosition) - swiper.translate);
+                            const currentSlideSize = swiper.slidesSizesGrid[swiper.activeIndex];
+                            if (moveDistance < currentSlideSize) momentumDuration = params.speed; else if (moveDistance < 2 * currentSlideSize) momentumDuration = 1.5 * params.speed; else momentumDuration = 2.5 * params.speed;
+                        }
+                    } else if (params.freeMode.sticky) {
+                        swiper.slideToClosest();
+                        return;
+                    }
+                    if (params.freeMode.momentumBounce && doBounce) {
+                        swiper.updateProgress(afterBouncePosition);
+                        swiper.setTransition(momentumDuration);
+                        swiper.setTranslate(newPosition);
+                        swiper.transitionStart(true, swiper.swipeDirection);
+                        swiper.animating = true;
+                        $wrapperEl.transitionEnd((() => {
+                            if (!swiper || swiper.destroyed || !data.allowMomentumBounce) return;
+                            emit("momentumBounce");
+                            swiper.setTransition(params.speed);
+                            setTimeout((() => {
+                                swiper.setTranslate(afterBouncePosition);
+                                $wrapperEl.transitionEnd((() => {
+                                    if (!swiper || swiper.destroyed) return;
+                                    swiper.transitionEnd();
+                                }));
+                            }), 0);
+                        }));
+                    } else if (swiper.velocity) {
+                        emit("_freeModeNoMomentumRelease");
+                        swiper.updateProgress(newPosition);
+                        swiper.setTransition(momentumDuration);
+                        swiper.setTranslate(newPosition);
+                        swiper.transitionStart(true, swiper.swipeDirection);
+                        if (!swiper.animating) {
+                            swiper.animating = true;
+                            $wrapperEl.transitionEnd((() => {
+                                if (!swiper || swiper.destroyed) return;
+                                swiper.transitionEnd();
+                            }));
+                        }
+                    } else swiper.updateProgress(newPosition);
+                    swiper.updateActiveIndex();
+                    swiper.updateSlidesClasses();
+                } else if (params.freeMode.sticky) {
+                    swiper.slideToClosest();
+                    return;
+                } else if (params.freeMode) emit("_freeModeNoMomentumRelease");
+                if (!params.freeMode.momentum || timeDiff >= params.longSwipesMs) {
+                    swiper.updateProgress();
+                    swiper.updateActiveIndex();
+                    swiper.updateSlidesClasses();
+                }
+            }
+            Object.assign(swiper, {
+                freeMode: {
+                    onTouchStart,
+                    onTouchMove,
+                    onTouchEnd
+                }
+            });
+        }
         function bildSliders() {
             let sliders = document.querySelectorAll('[class*="__swiper"]:not(.swiper-wrapper)');
             if (sliders) sliders.forEach((slider => {
@@ -13007,6 +13186,7 @@
                     slidesPerView: 3,
                     spaceBetween: 6,
                     speed: 400,
+                    loop: true,
                     navigation: {
                         prevEl: ".item__slide-button-prev",
                         nextEl: ".item__slide-button-next"
@@ -13022,7 +13202,9 @@
                     observer: true,
                     observeParents: true,
                     slidesPerView: 1,
+                    simulateTouch: false,
                     spaceBetween: 20,
+                    loop: true,
                     speed: 400,
                     thumbs: {
                         swiper: itemThumb
@@ -13030,6 +13212,53 @@
                     navigation: {
                         prevEl: ".item__slide-button-prev",
                         nextEl: ".item__slide-button-next"
+                    }
+                });
+                new core(".contacts__slider", {
+                    modules: [ Navigation, freeMode ],
+                    observer: true,
+                    observeParents: true,
+                    slidesPerView: 3,
+                    spaceBetween: 3,
+                    speed: 400,
+                    freeMode: {
+                        enabled: true,
+                        momentumRatio: .5
+                    },
+                    navigation: {
+                        prevEl: ".contacts__slide-button-prev",
+                        nextEl: ".contacts__slide-button-next"
+                    },
+                    breakpoints: {
+                        430: {
+                            spaceBetween: 10,
+                            freeMode: {
+                                enabled: false,
+                                momentumRatio: .5
+                            }
+                        },
+                        940: {
+                            slidesPerView: 4
+                        },
+                        1050: {
+                            slidesPerView: 5
+                        },
+                        1300: {
+                            slidesPerView: 6
+                        }
+                    }
+                });
+                new core(".contacts__office__slider", {
+                    modules: [ Navigation ],
+                    observer: true,
+                    observeParents: true,
+                    slidesPerView: 1,
+                    spaceBetween: 5,
+                    loop: true,
+                    speed: 400,
+                    navigation: {
+                        prevEl: ".contacts__office-slide-button-prev",
+                        nextEl: ".contacts__office-slide-button-next"
                     }
                 });
                 const slider = document.querySelector(".description__slider");
@@ -13055,10 +13284,43 @@
                         if (slider.classList.contains("swiper-initialized")) review.destroy();
                     }
                 }
+                const teamBlock = document.querySelector(".team__slider");
+                let team;
+                function mobileTeam() {
+                    if (window.innerWidth <= 1100 && "false" == teamBlock.dataset.mobile) {
+                        team = new core(teamBlock, {
+                            modules: [ Scrollbar, freeMode ],
+                            observer: true,
+                            observeParents: true,
+                            slidesPerView: "auto",
+                            spaceBetween: 15,
+                            speed: 400,
+                            freeMode: {
+                                enabled: true,
+                                momentumRatio: .5
+                            },
+                            scrollbar: {
+                                el: ".team__scrollbar",
+                                draggable: true
+                            }
+                        });
+                        teamBlock.dataset.mobile = "true";
+                    }
+                    if (window.innerWidth > 1100) {
+                        teamBlock.dataset.mobile = "false";
+                        if (teamBlock.classList.contains("swiper-initialized")) team.destroy();
+                    }
+                }
                 if (slider) {
                     mobileSlider();
                     window.addEventListener("resize", (() => {
                         mobileSlider();
+                    }));
+                }
+                if (teamBlock) {
+                    mobileTeam();
+                    window.addEventListener("resize", (() => {
+                        mobileTeam();
                     }));
                 }
             }
@@ -14288,6 +14550,28 @@
         };
         const da = new DynamicAdapt("max");
         da.init();
+        let zoomSlide = document.querySelectorAll(".item__slide");
+        if (zoomSlide) zoomSlide.forEach((el => {
+            let image = el.querySelector("img");
+            el.style.backgroundImage = "url(" + image.src + ")";
+            if (!isMobile.any()) {
+                el.addEventListener("mouseenter", (function(e) {
+                    this.style.backgroundSize = "200%";
+                }), false);
+                el.addEventListener("mousemove", (function(e) {
+                    let dimentions = this.getBoundingClientRect();
+                    let x = e.clientX - dimentions.left;
+                    let y = e.clientY - dimentions.top;
+                    let xpercent = Math.round(100 / (dimentions.width / x));
+                    let ypercent = Math.round(100 / (dimentions.height / y));
+                    this.style.backgroundPosition = xpercent + "% " + ypercent + "%";
+                }), false);
+                el.addEventListener("mouseleave", (function(e) {
+                    this.style.backgroundSize = "auto 90%";
+                    this.style.backgroundPosition = "center";
+                }), false);
+            }
+        }));
         const navBtn = document.querySelector(".header__catalog-btn");
         const navMenu = document.querySelector(".header__catalog-menu");
         const navTabs = document.querySelector(".catalog__tabs");
@@ -14350,6 +14634,9 @@
                 navBtn.classList.remove("_active");
                 _slideUp(navMenu);
             }
+            if (targetElement.closest(".main-catalog__spollers-title")) setInterval((() => {
+                catalogSize();
+            }), 100);
         }
         if (document.documentElement.clientWidth <= 520) {
             navTabs.querySelector(".catalog__title").classList.remove("_tab-active");
@@ -14381,6 +14668,25 @@
                 if (countFiles) label.querySelector(".popup__file-fake").innerText = "Выбрано файлов: " + countFiles; else label.querySelector(".popup__file-fake").innerText = labelVal;
             }));
         }));
+        const mainCatalog = document.querySelector(".main-catalog__main");
+        const script_filter = document.querySelector(".main-catalog__spollers");
+        const catalofInfo = document.querySelector(".main-catalog__info");
+        const cardsSection = document.querySelector(".cards-section");
+        function catalogSize() {
+            if (script_filter.offsetHeight > catalofInfo.offsetHeight) {
+                script_filter.classList.add("_active");
+                cardsSection.classList.add("_active");
+            } else {
+                script_filter.classList.remove("_active");
+                cardsSection.classList.remove("_active");
+            }
+        }
+        if (mainCatalog && cardsSection) {
+            if (document.documentElement.clientWidth > 880) catalogSize();
+            window.addEventListener("resize", (function() {
+                if (document.documentElement.clientWidth > 880) catalogSize();
+            }), true);
+        }
         isWebp();
         menuInit();
         spollers();

@@ -5,7 +5,7 @@
 	<title>Главная</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20220913211754">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220921183641">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -80,8 +80,7 @@
 						</nav>
 					</div>
 					<a href="index.html" class="header__logo">
-						<p>LOGO</p>
-						<p>Принтеры этикетов, сканеры <br> штрих-кода, риббоны, этикетки</p>
+						<img src="img/logo.svg" alt="logo">
 					</a>
 					<form action="#" class="header__search">
 						<input autocomplete="off" type="text" name="form[]" data-required placeholder="Например: Эскаватор погрузчик" class="header__search-input">
@@ -754,11 +753,8 @@
 							</a>
 							<meta itemprop="position" content="3" />
 						</li>
-						<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="item.html" itemprop="item">
-								<span itemprop="name">Лазерный сканер штрих-кода honeywell ms 5145</span>
-							</a>
-							<meta itemprop="position" content="4" />
+						<li>
+							<span>Лазерный сканер штрих-кода honeywell ms 5145</span>
 						</li>
 					</ul>
 				</div>
@@ -772,22 +768,22 @@
 								<div class="item__sliders">
 									<div class="item__slider">
 										<div class="item__swiper">
-											<div class="item__slide">
+											<div class="item__slide" itemprop="image">
 												<picture><source srcset="img/card/1.webp" type="image/webp"><img src="img/card/1.png" alt="Фотография товара" itemprop="image"></picture>
 											</div>
-											<div class="item__slide">
+											<div class="item__slide" itemprop="image">
 												<picture><source srcset="img/card/2.webp" type="image/webp"><img src="img/card/2.png" alt="Фотография товара" itemprop="image"></picture>
 											</div>
-											<div class="item__slide">
+											<div class="item__slide" itemprop="image">
 												<picture><source srcset="img/item/2.webp" type="image/webp"><img src="img/item/2.png" alt="Фотография товара" itemprop="image"></picture>
 											</div>
-											<div class="item__slide">
+											<div class="item__slide" itemprop="image">
 												<picture><source srcset="img/card/2.webp" type="image/webp"><img src="img/card/2.png" alt="Фотография товара" itemprop="image"></picture>
 											</div>
-											<div class="item__slide">
+											<div class="item__slide" itemprop="image">
 												<picture><source srcset="img/card/1.webp" type="image/webp"><img src="img/card/1.png" alt="Фотография товара" itemprop="image"></picture>
 											</div>
-											<div class="item__slide">
+											<div class="item__slide" itemprop="image">
 												<picture><source srcset="img/item/2.webp" type="image/webp"><img src="img/item/2.png" alt="Фотография товара" itemprop="image"></picture>
 											</div>
 										</div>
@@ -821,13 +817,15 @@
 								</div>
 							</div>
 							<div class="item__right">
-								<div class="item__price-btns" data-da=".item__left, 840, 1">
+								<!-- data-da=".item__left, 840, 1" -->
+								<div class="item__price-btns">
 									<p class="item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 										<span itemprop="price">4 936</span>
 										<span itemprop="priceCurrency" content="RUB">₽</span>
 									</p>
-									<button class="item__fav _icon-heart push"><span>В избранное</span></button>
 									<button class="item__cart _icon-cart push"><span>В корзину</span></button>
+									<button class="item__buy push"><span>Купить в один клик</span></button>
+									<button class="item__fav _icon-heart push"><span>В избранное</span></button>
 								</div>
 								<div class="item__info">
 									<div class="item__info-line">
@@ -943,7 +941,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="item__bottom" data-da=".item__left, 900, last">
+						<!-- data-da=".item__left, 900, last" -->
+						<div class="item__bottom">
 							<div class="item__bottom-block">
 								<div class="item__bottom-img">
 									<img src="img/icons/item/4.svg" alt="Icon">
@@ -1290,48 +1289,50 @@
 														<td>
 														</td>
 													</tr>
-													<tr>
+													<tr class="table__none-border">
 														<td>
 															<p class="table__title">
 																Память
-															</p>
-															<p class="table__subtitle">
-																слоты расширения
 															</p>
 														</td>
 														<td>
 															<p>
 																4 Гб RAM, 32 Гб Flash
 															</p>
+														</td>
+														<td>
+															<p>
+																4 Гб RAM, 64 Гб Flash
+															</p>
+														</td>
+													</tr>
+													<tr class="table__none-border-bottom">
+														<td>
+															<p class="table__subtitle">
+																слоты расширения
+															</p>
+														</td>
+														<td>
 															<p>
 																microSDHC — до 256 Гб
 															</p>
 														</td>
 														<td>
 															<p>
-																4 Гб RAM, 64 Гб Flash
-															</p>
-															<p>
 																microSDXC — до 2 Тб
 															</p>
 														</td>
 													</tr>
-													<tr>
+													<tr class="table__none-border">
 														<td>
 															<p class="table__title">
 																Дисплей
-															</p>
-															<p class="table__subtitle">
-																сенсор
 															</p>
 														</td>
 														<td>
 															<p>
 																5”, 1080 x 1920, <br>
 																светодиодная подсветка
-															</p>
-															<p>
-																ёмкостный
 															</p>
 														</td>
 														<td>
@@ -1340,72 +1341,128 @@
 															</p>
 														</td>
 													</tr>
-													<tr>
+													<tr class="table__none-border-bottom">
+														<td>
+															<p class="table__subtitle">
+																сенсор
+															</p>
+														</td>
+														<td>
+															<p>
+																ёмкостный
+															</p>
+														</td>
+														<td>
+														</td>
+													</tr>
+													<tr class="table__none-border">
 														<td>
 															<p class="table__title">
 																Камера
 															</p>
+														</td>
+														<td>
+														</td>
+														<td>
+														</td>
+													</tr>
+													<tr class="table__none-border">
+														<td>
 															<p class="table__subtitle">
 																основная
 															</p>
-															<p class="table__subtitle">
-																диафрагма
+														</td>
+														<td>
+															<p>
+																13 Мп
 															</p>
-															<p class="table__subtitle">
-																вспышка
+														</td>
+														<td>
+															<p>
+																16 Мп, HDR
 															</p>
-															<p class="table__subtitle">
-																автофокус
-															</p>
-															<p class="table__subtitle">
-																фронтальная
-															</p>
+														</td>
+													</tr>
+													<tr class="table__none-border">
+														<td>
 															<p class="table__subtitle">
 																диафрагма
 															</p>
 														</td>
 														<td>
-															<p class="table__hidden">
-																s
-															</p>
-															<p>
-																13 Мп
-															</p>
 															<p>
 																f/2.2
 															</p>
+														</td>
+														<td>
+															<p>
+																-
+															</p>
+														</td>
+													</tr>
+													<tr class="table__none-border">
+														<td>
+															<p class="table__subtitle">
+																вспышка
+															</p>
+														</td>
+														<td>
 															<p>
 																есть
 															</p>
+														</td>
+														<td>
 															<p>
 																есть
 															</p>
+														</td>
+													</tr>
+													<tr class="table__none-border">
+														<td>
+															<p class="table__subtitle">
+																автофокус
+															</p>
+														</td>
+														<td>
+															<p>
+																есть
+															</p>
+														</td>
+														<td>
+															<p>
+																есть
+															</p>
+														</td>
+													</tr>
+													<tr class="table__none-border">
+														<td>
+															<p class="table__subtitle">
+																фронтальная
+															</p>
+														</td>
+														<td>
 															<p>
 																5 Мп
 															</p>
+														</td>
+														<td>
+															<p>
+																8 Мп
+															</p>
+														</td>
+													</tr>
+													<tr class="table__none-border-bottom">
+														<td>
+															<p class="table__subtitle">
+																диафрагма
+															</p>
+														</td>
+														<td>
 															<p>
 																f/2.0
 															</p>
 														</td>
 														<td>
-															<p class="table__hidden">
-																s
-															</p>
-															<p>
-																16 Мп, HDR
-															</p>
-															<p>
-																-
-															</p>
-															<p>
-																есть
-															</p>
-															<p>
-																есть
-															</p>
-															<p>
-																8 Мп
-															</p>
 															<p>
 																-
 															</p>
@@ -1454,56 +1511,74 @@
 															</p>
 														</td>
 														<td>
-															<p>
-																Компактный
-															</p>
 														</td>
 													</tr>
-													<tr>
+													<tr class="table__none-border">
 														<td>
 															<p class="table__title">
 																Сканер
 															</p>
+
+														</td>
+														<td>
+														</td>
+													</tr>
+													<tr class="table__none-border">
+														<td>
 															<p class="table__subtitle">
 																линейный — 1D
 															</p>
+														</td>
+														<td>
+															<ul>
+																<li>имидж‑сканер SE55 (IntelliFocus™)</li>
+																<li>имидж‑сканер SE4720</li>
+															</ul>
+														</td>
+													</tr>
+													<tr class="table__none-border-bottom">
+														<td>
 															<p class="table__subtitle">
 																линейный — 2D
 															</p>
 														</td>
 														<td>
-															<p class="table__hidden">
-																s
-															</p>
-															<ul>
-																<li>имидж‑сканер SE55 (IntelliFocus™)</li>
-																<li>имидж‑сканер SE4720</li>
-															</ul>
 															<ul>
 																<li>имидж‑сканер SE55 (IntelliFocus™)</li>
 																<li>имидж‑сканер SE4720</li>
 															</ul>
 														</td>
 													</tr>
-													<tr>
+													<tr class="table__none-border">
 														<td>
 															<p class="table__title">
 																Сканер
 															</p>
+														</td>
+														<td>
+														</td>
+													</tr>
+													<tr class="table__none-border">
+														<td>
 															<p class="table__subtitle">
 																линейные
 															</p>
-															<p class="table__subtitle">
-																двухмерные
-															</p>
 														</td>
 														<td>
-															<p class="table__hidden">s</p>
 															<p>
 																Code 39, Code 128, Code 93, Codabar, MSI, UPC/EAN, Interleaved 2 of 5,
 																RSS
 																PDF-417, Micro PDF-417,
 															</p>
+														</td>
+													</tr>
+													<tr class="table__none-border-bottom">
+														<td>
+															<p class="table__subtitle">
+																двухмерные
+															</p>
+														</td>
+														<td>
 															<p>
 																Composite, TLC-39, Datamatrix, QR Code, Micro QRCode, Maxicode, Postal
 																codes, Aztec Code, Han
@@ -1523,13 +1598,10 @@
 															</p>
 														</td>
 													</tr>
-													<tr>
+													<tr class="table__none-border">
 														<td>
 															<p class="table__title">
 																Память
-															</p>
-															<p class="table__subtitle">
-																слот расширения
 															</p>
 														</td>
 														<td>
@@ -1538,30 +1610,57 @@
 																<li>8 Гб RAM, 64 Гб Flash</li>
 																<li>8 Гб RAM, 128 Гб Flash</li>
 															</ul>
+														</td>
+													</tr>
+													<tr class="table__none-border-bottom">
+														<td>
+															<p class="table__subtitle">
+																слот расширения
+															</p>
+														</td>
+														<td>
 															<p>
 																microSDXC — до 2 Тб
 															</p>
 														</td>
 													</tr>
-													<tr>
+													<tr class="table__none-border">
 														<td>
 															<p class="table__title">
 																Сканер
 															</p>
+														</td>
+														<td>
+															<p>6”, 1080 x 2160, светодиодная подсветка</p>
+														</td>
+													</tr>
+													<tr class="table__none-border">
+														<td>
 															<p class="table__subtitle">
 																яркость
 															</p>
+														</td>
+														<td>
+															<p>600 нит</p>
+														</td>
+													</tr>
+													<tr class="table__none-border">
+														<td>
 															<p class="table__subtitle">
 																сенсор
 															</p>
+														</td>
+														<td>
+															<p>ёмкостный</p>
+														</td>
+													</tr>
+													<tr class="table__none-border-bottom">
+														<td>
 															<p class="table__subtitle">
 																защита
 															</p>
 														</td>
 														<td>
-															<p>6”, 1080 x 2160, светодиодная подсветка</p>
-															<p>600 нит</p>
-															<p>ёмкостный</p>
 															<p>стекло Corning® Gorilla Glass</p>
 														</td>
 													</tr>
@@ -1740,7 +1839,7 @@
 											<p>Аксессуары для компактного терминала сбора данных Zebra TC53</p>
 										</div>
 										<div class="table-sb-wrapper" data-simplebar>
-											<table class="description__table table table--modification table--accessories">
+											<table class="description__table table table--accessories">
 												<thead>
 													<tr>
 														<td>Наименование</td>
@@ -2095,7 +2194,7 @@
 											<p>Аксессуары для компактного терминала сбора данных Zebra TC53</p>
 										</div>
 										<div class="table-sb-wrapper" data-simplebar>
-											<table class="description__table table table--modification table--accessories">
+											<table class="description__table table table--accessories">
 												<thead>
 													<tr>
 														<td>Наименование</td>
@@ -2244,29 +2343,6 @@
 														<picture><source srcset="img/services/6.webp" type="image/webp"><img class="services__img" src="img/services/6.png" alt="Картинка"></picture>
 													</a>
 												</div>
-											</div>
-											<div data-showmore data-showmore-media="700,max" class="services__show-more">
-												<p data-showmore-content="60" class="services__text">
-													Повседневная практика показывает, что постоянное информационно-пропагандистское
-													обеспечение нашей
-													деятельности
-													способствует подготовки и реализации направлений прогрессивного развития. Идейные
-													соображения
-													высшего
-													порядка, а также
-													сложившаяся структура организации играет важную роль в формировании существенных
-													финансовых и
-													административных условий.
-													Разнообразный и богатый опыт укрепление и развитие структуры в значительной
-													степени
-													обуславливает
-													создание систем
-													массового участия.
-												</p>
-												<button data-showmore-button type="button" class="services__more">
-													<span>Читать весь текст</span>
-													<span>Скрыть</span>
-												</button>
 											</div>
 										</div>
 									</div>
@@ -2440,8 +2516,7 @@
 				<div class="footer__container">
 					<div class="footer__block">
 						<a href="index.html" class="footer__logo">
-							<p>LOGO</p>
-							<p>Принтеры этикетов, сканеры <br> штрих-кода, риббоны, этикетки</p>
+							<img src="img/logo.svg" alt="Logo">
 						</a>
 					</div>
 					<div class="footer__block footer__block--ul">
@@ -2612,7 +2687,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220913211754"></script>
+	<script src="js/app.min.js?_v=20220921183641"></script>
 	<script>
 		let customInput = document.querySelector(".customInput");
 		let selectedData = document.querySelector(".selectedData");
