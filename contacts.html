@@ -5,7 +5,7 @@
 	<title>Главная</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20220921190107">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220922160415">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -79,8 +79,8 @@
 							</div>
 						</nav>
 					</div>
-					<a href="index.html" class="header__logo">
-						<img src="img/logo.svg" alt="logo">
+					<a href="index.html" class="header__logo" itemscope itemtype="http://schema.org/Organization">
+						<img src="img/logo.svg" alt="logo" itemprop="logo">
 					</a>
 					<form action="#" class="header__search">
 						<input autocomplete="off" type="text" name="form[]" data-required placeholder="Например: Эскаватор погрузчик" class="header__search-input">
@@ -870,12 +870,12 @@
 					</form>
 				</div>
 				<div class="contacts__container">
-					<div class="contacts__office">
+					<div class="contacts__office" itemscope itemtype="https://schema.org/Organization">
 						<p class="contacts__office-title">
 							Офис “Шрих.Су” г. Казань
 						</p>
 						<div class="contacts__office-main">
-							<div class="contacts__office-block contacts__office-block--flex">
+							<div class="contacts__office-block contacts__office-block--flex" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
 								<div class="contacts__office-block-top">
 									<div class="contacts__office-line">
 										<div class="contacts__office-block-icon _icon-location"></div>
@@ -883,7 +883,7 @@
 											<p class="contacts__office-block-title">
 												Адрес:
 											</p>
-											<p class="contacts__office-block-text">
+											<p class="contacts__office-block-text" itemprop="streetAddress">
 												г.Казань, ул. Магистральная 4б.
 											</p>
 										</div>
@@ -894,7 +894,7 @@
 											<p class="contacts__office-block-title">
 												Индекс:
 											</p>
-											<p class="contacts__office-block-text">
+											<p class="contacts__office-block-text" itemprop="postalCode">
 												420099
 											</p>
 										</div>
@@ -933,7 +933,7 @@
 											<p class="contacts__office-block-title">
 												Электронная почта:
 											</p>
-											<a href="mailto:kazan@shtrish.su" class="contacts__office-block-text">
+											<a href="mailto:kazan@shtrish.su" class="contacts__office-block-text" itemprop="email">
 												kazan@shtrish.su
 											</a>
 										</div>
@@ -1223,8 +1223,8 @@
 			<div class="footer__top">
 				<div class="footer__container">
 					<div class="footer__block">
-						<a href="index.html" class="footer__logo">
-							<img src="img/logo.svg" alt="Logo">
+						<a href="index.html" class="footer__logo" itemscope itemtype="http://schema.org/Organization">
+							<img src="img/logo.svg" alt="Logo" itemprop="logo">
 						</a>
 					</div>
 					<div class="footer__block footer__block--ul">
@@ -1395,7 +1395,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220921190107"></script>
+	<script src="js/app.min.js?_v=20220922160415"></script>
 	<script>
 		let customInput = document.querySelector(".customInput");
 		let selectedData = document.querySelector(".selectedData");

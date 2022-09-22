@@ -5,7 +5,7 @@
 	<title>Главная</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20220921190107">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220922160415">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -79,8 +79,8 @@
 							</div>
 						</nav>
 					</div>
-					<a href="index.html" class="header__logo">
-						<img src="img/logo.svg" alt="logo">
+					<a href="index.html" class="header__logo" itemscope itemtype="http://schema.org/Organization">
+						<img src="img/logo.svg" alt="logo" itemprop="logo">
 					</a>
 					<form action="#" class="header__search">
 						<input autocomplete="off" type="text" name="form[]" data-required placeholder="Например: Эскаватор погрузчик" class="header__search-input">
@@ -761,7 +761,10 @@
 						Санкт-Петербург,
 						Кемерово, Псков, Екатеринбург, Нижний Новгород, Белгород, Омск.
 					</p>
-					<picture><source srcset="img/about/bg.webp" type="image/webp"><img src="img/about/bg.png" class="about__main-img" alt="фотография"></picture>
+					<div class="about__main-img" itemscope itemtype="https://schema.org/ImageObject">
+						<picture><source srcset="img/about/bg.webp" type="image/webp"><img src="img/about/bg.png" alt="Главная фотография" itemprop="contentUrl"></picture>
+						<meta itemprop="name" content="Главная фотография">
+					</div>
 					<div class="about__years">
 						<div class="about__year">
 							<p class="about__year-title">
@@ -1101,36 +1104,36 @@
 					</h2>
 					<div class="team__slider" data-mobile="false">
 						<div class="team__swiper">
-							<div class="team__slide">
-								<div class="team__img-block">
-									<picture><source srcset="img/about/member1.webp" type="image/webp"><img src="img/about/member1.png" alt="Участник команды"></picture>
+							<div class="team__slide" itemscope itemtype="https://schema.org/Person">
+								<div class="team__img-block" itemprop="image">
+									<picture><source srcset="img/about/member1.webp" type="image/webp"><img src="img/about/member1.png" alt="Сергей Викторович"></picture>
 								</div>
 								<div class="team__text-block">
-									<p class="team__name">
+									<p class="team__name" itemprop="name">
 										Сергей Викторович
 									</p>
-									<p class="team__job">
+									<p class="team__job" itemprop="jobTitle">
 										ведущий менеджер по продажам
 									</p>
-									<p class="team__text">
+									<p class="team__text" itemprop="description">
 										Занимается сопровождением клиентов от заказа на сайте
 										до получения партии. Сергей ответственно относится к делу, любит то, чем занимается
 										и к каждому клиенту относится индивидуально.
 									</p>
 								</div>
 							</div>
-							<div class="team__slide">
-								<div class="team__img-block">
-									<picture><source srcset="img/about/member2.webp" type="image/webp"><img src="img/about/member2.png" alt="Участник команды"></picture>
+							<div class="team__slide" itemscope itemtype="https://schema.org/Person">
+								<div class="team__img-block" itemprop="image">
+									<picture><source srcset="img/about/member2.webp" type="image/webp"><img src="img/about/member2.png" alt="Вениамин Николаевич"></picture>
 								</div>
 								<div class="team__text-block">
-									<p class="team__name">
+									<p class="team__name" itemprop="name">
 										Вениамин Николаевич
 									</p>
-									<p class="team__job">
+									<p class="team__job" itemprop="jobTitle">
 										руководитель IT отдела
 									</p>
-									<p class="team__text">
+									<p class="team__text" itemprop="description">
 										Заведует всей технической частью работы компании: работа сайта, программы, верстка.
 										Благодаря
 										ему вы можете без проблем
@@ -1138,18 +1141,18 @@
 									</p>
 								</div>
 							</div>
-							<div class="team__slide">
-								<div class="team__img-block">
-									<picture><source srcset="img/about/member1.webp" type="image/webp"><img src="img/about/member1.png" alt="Участник команды"></picture>
+							<div class="team__slide" itemscope itemtype="https://schema.org/Person">
+								<div class="team__img-block" itemprop="image">
+									<picture><source srcset="img/about/member1.webp" type="image/webp"><img src="img/about/member1.png" alt="Лолита Львовна"></picture>
 								</div>
 								<div class="team__text-block">
-									<p class="team__name">
+									<p class="team__name" itemprop="name">
 										Лолита Львовна
 									</p>
-									<p class="team__job">
+									<p class="team__job" itemprop="jobTitle">
 										руководитель отдела логистики
 									</p>
-									<p class="team__text">
+									<p class="team__text" itemprop="description">
 										На протяжении 8 лет обеспечивает бесперебойную и качественную услугу по оперативной
 										доставке
 										вашей партии в целости
@@ -1157,18 +1160,18 @@
 									</p>
 								</div>
 							</div>
-							<div class="team__slide">
-								<div class="team__img-block">
-									<picture><source srcset="img/about/member2.webp" type="image/webp"><img src="img/about/member2.png" alt="Участник команды"></picture>
+							<div class="team__slide" itemscope itemtype="https://schema.org/Person">
+								<div class="team__img-block" itemprop="image">
+									<picture><source srcset="img/about/member2.webp" type="image/webp"><img src="img/about/member2.png" alt="Федор Константинович"></picture>
 								</div>
 								<div class="team__text-block">
-									<p class="team__name">
+									<p class="team__name" itemprop="name">
 										Федор Константинович
 									</p>
-									<p class="team__job">
+									<p class="team__job" itemprop="jobTitle">
 										руководитель динансового отдела
 									</p>
-									<p class="team__text">
+									<p class="team__text" itemprop="description">
 										Заведует всеми финансами: расчёты клиентов, заключение договоров.
 									</p>
 								</div>
@@ -1392,8 +1395,8 @@
 			<div class="footer__top">
 				<div class="footer__container">
 					<div class="footer__block">
-						<a href="index.html" class="footer__logo">
-							<img src="img/logo.svg" alt="Logo">
+						<a href="index.html" class="footer__logo" itemscope itemtype="http://schema.org/Organization">
+							<img src="img/logo.svg" alt="Logo" itemprop="logo">
 						</a>
 					</div>
 					<div class="footer__block footer__block--ul">
@@ -1564,7 +1567,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220921190107"></script>
+	<script src="js/app.min.js?_v=20220922160415"></script>
 	<script>
 		let customInput = document.querySelector(".customInput");
 		let selectedData = document.querySelector(".selectedData");
