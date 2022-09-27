@@ -13218,7 +13218,7 @@
                     modules: [ Navigation, freeMode ],
                     observer: true,
                     observeParents: true,
-                    slidesPerView: 3,
+                    slidesPerView: "auto",
                     spaceBetween: 3,
                     speed: 400,
                     freeMode: {
@@ -13231,6 +13231,7 @@
                     },
                     breakpoints: {
                         430: {
+                            slidesPerView: 3,
                             spaceBetween: 10,
                             freeMode: {
                                 enabled: false,
@@ -14567,7 +14568,7 @@
                     this.style.backgroundPosition = xpercent + "% " + ypercent + "%";
                 }), false);
                 el.addEventListener("mouseleave", (function(e) {
-                    this.style.backgroundSize = "auto 90%";
+                    this.style.backgroundSize = "cover";
                     this.style.backgroundPosition = "center";
                 }), false);
             }

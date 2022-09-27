@@ -5,7 +5,7 @@
 	<title>Главная</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20220922180143">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220927184326">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -756,11 +756,50 @@
 			<section class="main-catalog">
 				<div class="main-catalog__container">
 					<h1 class="main-catalog__title title">Детектор валют</h1>
-					<div data-showmore="items" class="main-catalog__type">
-						<div data-showmore-content="1" class="main-catalog__type-content">
+					<div class="main-catalog__type">
+						<div class="main-catalog__type-content">
 							<div class="main-catalog__chk checkbox-catalog">
 								<label class="checkbox-catalog__label">
-									<input class="checkbox-catalog__input" checked type="checkbox" value="Ультрафиолетовые" name="itemType">
+									<input class="checkbox-catalog__input" hidden checked type="radio" value="Ультрафиолетовые" name="filterRadio">
+									<span class="checkbox-catalog__text">
+										Ультрафиолетовые
+									</span>
+								</label>
+								<label class="checkbox-catalog__label">
+									<input class="checkbox-catalog__input" hidden type="radio" value="Инфракрасные" name="filterRadio">
+									<span class="checkbox-catalog__text">
+										Инфракрасные
+									</span>
+								</label>
+								<label class="checkbox-catalog__label">
+									<input class="checkbox-catalog__input" hidden type="radio" value="Автоматические" name="filterRadio">
+									<span class="checkbox-catalog__text">
+										Автоматические
+									</span>
+								</label>
+								<label class="checkbox-catalog__label">
+									<input class="checkbox-catalog__input" hidden type="radio" value="Автономные" name="filterRadio">
+									<span class="checkbox-catalog__text">
+										Автономные
+									</span>
+								</label>
+								<label class="checkbox-catalog__label">
+									<input class="checkbox-catalog__input" hidden type="radio" value="Многофункциональные" name="filterRadio">
+									<span class="checkbox-catalog__text">
+										Многофункциональные
+									</span>
+								</label>
+								<label class="checkbox-catalog__label">
+									<input class="checkbox-catalog__input" hidden type="radio" value="Специальные" name="filterRadio">
+									<span class="checkbox-catalog__text">
+										Специальные
+									</span>
+								</label>
+							</div>
+							<!-- <div class="main-catalog__chk checkbox-catalog">
+								<label class="checkbox-catalog__label">
+									<input class="checkbox-catalog__input" type="checkbox" value="Ультрафиолетовые"
+										name="itemType">
 									<span class="checkbox-catalog__text">
 										Ультрафиолетовые
 									</span>
@@ -772,7 +811,8 @@
 									</span>
 								</label>
 								<label class="checkbox-catalog__label">
-									<input class="checkbox-catalog__input" type="checkbox" value="Автоматические" name="itemType">
+									<input class="checkbox-catalog__input" type="checkbox" value="Автоматические"
+										name="itemType">
 									<span class="checkbox-catalog__text">
 										Автоматические
 									</span>
@@ -784,7 +824,8 @@
 									</span>
 								</label>
 								<label class="checkbox-catalog__label">
-									<input class="checkbox-catalog__input" type="checkbox" value="Многофункциональные" name="itemType">
+									<input class="checkbox-catalog__input" type="checkbox" value="Многофункциональные"
+										name="itemType">
 									<span class="checkbox-catalog__text">
 										Многофункциональные
 									</span>
@@ -795,50 +836,14 @@
 										Специальные
 									</span>
 								</label>
-							</div>
-							<div class="main-catalog__chk checkbox-catalog">
-								<label class="checkbox-catalog__label">
-									<input class="checkbox-catalog__input" type="checkbox" value="Ультрафиолетовые" name="itemType">
-									<span class="checkbox-catalog__text">
-										Ультрафиолетовые
-									</span>
-								</label>
-								<label class="checkbox-catalog__label">
-									<input class="checkbox-catalog__input" type="checkbox" value="Инфракрасные" name="itemType">
-									<span class="checkbox-catalog__text">
-										Инфракрасные
-									</span>
-								</label>
-								<label class="checkbox-catalog__label">
-									<input class="checkbox-catalog__input" type="checkbox" value="Автоматические" name="itemType">
-									<span class="checkbox-catalog__text">
-										Автоматические
-									</span>
-								</label>
-								<label class="checkbox-catalog__label">
-									<input class="checkbox-catalog__input" type="checkbox" value="Автономные" name="itemType">
-									<span class="checkbox-catalog__text">
-										Автономные
-									</span>
-								</label>
-								<label class="checkbox-catalog__label">
-									<input class="checkbox-catalog__input" type="checkbox" value="Многофункциональные" name="itemType">
-									<span class="checkbox-catalog__text">
-										Многофункциональные
-									</span>
-								</label>
-								<label class="checkbox-catalog__label">
-									<input class="checkbox-catalog__input" type="checkbox" value="Специальные" name="itemType">
-									<span class="checkbox-catalog__text">
-										Специальные
-									</span>
-								</label>
-							</div>
+							</div> -->
 						</div>
-						<button data-showmore-button type="button" class="main-catalog__type-more">
-							<span>Смотреть все</span>
-							<span>Закрыть</span>
-						</button>
+						<label class="checkbox-catalog__label checkbox-catalog__label--all">
+							<input class="checkbox-catalog__input" hidden type="radio" value="Все" name="filterRadio">
+							<span class="main-catalog__type-more">
+								Смотреть все
+							</span>
+						</label>
 					</div>
 					<div class="main-catalog__main">
 						<div class="main-catalog__filter" data-spollers="880" data-da=".main-catalog__info-btns,880,first">
@@ -1473,6 +1478,10 @@
 					<div class="footer__block">
 						<a href="index.html" class="footer__logo">
 							<img src="img/logo.svg" alt="Logo">
+							<p class="footer__logo-text">
+								Принтеры этикетов, канеры <br>
+								штрих-кода, риббоны, этикетки
+							</p>
 						</a>
 					</div>
 					<div class="footer__block footer__block--ul">
@@ -1643,7 +1652,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220922180143"></script>
+	<script src="js/app.min.js?_v=20220927184326"></script>
 	<script>
 		let customInput = document.querySelector(".customInput");
 		let selectedData = document.querySelector(".selectedData");
