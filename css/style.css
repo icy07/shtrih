@@ -10912,10 +10912,7 @@ body::after {
   }
 }
 @media (max-width: 40.625em) {
-  .services-company__prices-title:first-child {
-    display: block;
-  }
-  .services-company__prices-title:last-child {
+  .services-company__prices-title--hidden {
     display: none;
   }
 }
