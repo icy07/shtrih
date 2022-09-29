@@ -5,13 +5,13 @@
 	<title>Главная</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20220927184841">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220929112945">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 	<div class="wrapper">
-		<header class="header">
+		<header class="header" data-scroll="174">
 			<div class="header__top">
 				<div class="header__container">
 					<div class="header__top-left">
@@ -58,7 +58,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="header__middle">
+			<div class="header__middle" data-lp>
 				<div class="header__container">
 					<div class="header__menu menu">
 						<button type="button" class="menu__icon icon-menu"><span></span></button>
@@ -731,6 +731,7 @@
 				</div>
 			</div>
 		</div>
+		<a href="#" data-goto=".header" class="arrow-top _icon-arrow-d"></a>
 		<main class="page">
 			<nav class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
 				<div class="breadcrumbs__container">
@@ -796,47 +797,6 @@
 									</span>
 								</label>
 							</div>
-							<!-- <div class="main-catalog__chk checkbox-catalog">
-								<label class="checkbox-catalog__label">
-									<input class="checkbox-catalog__input" type="checkbox" value="Ультрафиолетовые"
-										name="itemType">
-									<span class="checkbox-catalog__text">
-										Ультрафиолетовые
-									</span>
-								</label>
-								<label class="checkbox-catalog__label">
-									<input class="checkbox-catalog__input" type="checkbox" value="Инфракрасные" name="itemType">
-									<span class="checkbox-catalog__text">
-										Инфракрасные
-									</span>
-								</label>
-								<label class="checkbox-catalog__label">
-									<input class="checkbox-catalog__input" type="checkbox" value="Автоматические"
-										name="itemType">
-									<span class="checkbox-catalog__text">
-										Автоматические
-									</span>
-								</label>
-								<label class="checkbox-catalog__label">
-									<input class="checkbox-catalog__input" type="checkbox" value="Автономные" name="itemType">
-									<span class="checkbox-catalog__text">
-										Автономные
-									</span>
-								</label>
-								<label class="checkbox-catalog__label">
-									<input class="checkbox-catalog__input" type="checkbox" value="Многофункциональные"
-										name="itemType">
-									<span class="checkbox-catalog__text">
-										Многофункциональные
-									</span>
-								</label>
-								<label class="checkbox-catalog__label">
-									<input class="checkbox-catalog__input" type="checkbox" value="Специальные" name="itemType">
-									<span class="checkbox-catalog__text">
-										Специальные
-									</span>
-								</label>
-							</div> -->
 						</div>
 						<label class="checkbox-catalog__label checkbox-catalog__label--all">
 							<input class="checkbox-catalog__input" hidden type="radio" value="Все" name="filterRadio">
@@ -946,13 +906,29 @@
 						</div>
 						<div class="main-catalog__info">
 							<div class="main-catalog__info-top">
-								<div class="main-catalog__sort">
-									<span>Сортирова по:</span>
-									<select name="sort" class="main-catalog__sel">
-										<option value="1" selected>по популярности</option>
-										<option value="2">по возрастанию</option>
-										<option value="3">по убыванию</option>
-									</select>
+								<div class="main-catalog__info-top-sort-chk-wrapper">
+									<div class="main-catalog__sort">
+										<span>Сортировка по:</span>
+										<select name="sort" class="main-catalog__sel">
+											<option value="1" selected>по популярности</option>
+											<option value="2">по возрастанию</option>
+											<option value="3">по убыванию</option>
+										</select>
+									</div>
+									<div class="main-catalog__indo-top-chk-block checkbox--blue">
+										<label class="checkbox__label">
+											<input class="checkbox__input" type="checkbox" value="Скрыть модификации" name="goods-type">
+											<span class="checkbox__text">
+												Скрыть модификации
+											</span>
+										</label>
+										<label class="checkbox__label">
+											<input class="checkbox__input" checked type="checkbox" value="Товары в продаже" name="goods-type">
+											<span class="checkbox__text">
+												Товары в продаже
+											</span>
+										</label>
+									</div>
 								</div>
 								<div class="main-catalog__info-btns">
 									<button class="main-catalog__info-btn _icon-dots _active push"></button>
@@ -1485,7 +1461,7 @@
 						</a>
 					</div>
 					<div class="footer__block footer__block--ul">
-						<div data-spollers="400" class="footer__spoiler">
+						<div data-spollers="500" class="footer__spoiler">
 							<div class="footer__spoiler-item">
 								<p data-spoller class="footer__spoiler-title">Каталог</p>
 								<div class="footer__spoiler-body footer__spoiler-body--ul">
@@ -1510,7 +1486,7 @@
 						</div>
 					</div>
 					<div class="footer__block footer__block--ul">
-						<div data-spollers="400" class="footer__spoiler">
+						<div data-spollers="500" class="footer__spoiler">
 							<div class="footer__spoiler-item">
 								<p data-spoller class="footer__spoiler-title">Информация</p>
 								<div class="footer__spoiler-body footer__spoiler-body--ul">
@@ -1534,7 +1510,7 @@
 						</div>
 					</div>
 					<div class="footer__block footer__block--contacts">
-						<div data-spollers="400" class="footer__spoiler">
+						<div data-spollers="500" class="footer__spoiler">
 							<div class="footer__spoiler-item">
 								<p data-spoller class="footer__spoiler-title">Контакты</p>
 								<div class="footer__spoiler-body footer__contacts">
@@ -1652,7 +1628,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220927184841"></script>
+	<script src="js/app.min.js?_v=20220929112945"></script>
 	<script>
 		let customInput = document.querySelector(".customInput");
 		let selectedData = document.querySelector(".selectedData");

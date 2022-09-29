@@ -5,13 +5,13 @@
 	<title>Главная</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20220927184841">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220929112945">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 	<div class="wrapper">
-		<header class="header">
+		<header class="header" data-scroll="174">
 			<div class="header__top">
 				<div class="header__container">
 					<div class="header__top-left">
@@ -58,7 +58,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="header__middle">
+			<div class="header__middle" data-lp>
 				<div class="header__container">
 					<div class="header__menu menu">
 						<button type="button" class="menu__icon icon-menu"><span></span></button>
@@ -731,6 +731,8 @@
 				</div>
 			</div>
 		</div>
+		<a href="#" data-goto=".header" class="arrow-top _icon-arrow-d"></a>
+
 		<main class="page">
 			<nav class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
 				<div class="breadcrumbs__container">
@@ -1112,7 +1114,7 @@
 							приобретённого в компании SHTRIH.SU торгового оборудования.
 						</p>
 						<a href="#">
-							Так же предлагаем автоматизацию в других отраслях
+							<span>Так же предлагаем автоматизацию</span> <span>в других отраслях</span>
 						</a>
 					</div>
 				</div>
@@ -1314,7 +1316,7 @@
 						</a>
 					</div>
 					<div class="footer__block footer__block--ul">
-						<div data-spollers="400" class="footer__spoiler">
+						<div data-spollers="500" class="footer__spoiler">
 							<div class="footer__spoiler-item">
 								<p data-spoller class="footer__spoiler-title">Каталог</p>
 								<div class="footer__spoiler-body footer__spoiler-body--ul">
@@ -1339,7 +1341,7 @@
 						</div>
 					</div>
 					<div class="footer__block footer__block--ul">
-						<div data-spollers="400" class="footer__spoiler">
+						<div data-spollers="500" class="footer__spoiler">
 							<div class="footer__spoiler-item">
 								<p data-spoller class="footer__spoiler-title">Информация</p>
 								<div class="footer__spoiler-body footer__spoiler-body--ul">
@@ -1363,7 +1365,7 @@
 						</div>
 					</div>
 					<div class="footer__block footer__block--contacts">
-						<div data-spollers="400" class="footer__spoiler">
+						<div data-spollers="500" class="footer__spoiler">
 							<div class="footer__spoiler-item">
 								<p data-spoller class="footer__spoiler-title">Контакты</p>
 								<div class="footer__spoiler-body footer__contacts">
@@ -1481,7 +1483,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220927184841"></script>
+	<script src="js/app.min.js?_v=20220929112945"></script>
 	<script>
 		let customInput = document.querySelector(".customInput");
 		let selectedData = document.querySelector(".selectedData");
