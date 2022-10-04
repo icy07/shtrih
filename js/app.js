@@ -14469,14 +14469,12 @@
             addWindowScrollEvent = true;
             const header = document.querySelector("header.header");
             const arrow = document.querySelector(".arrow-top");
-            header.hasAttribute("data-scroll-show");
-            header.dataset.scrollShow && header.dataset.scrollShow;
+            const middle = document.querySelector(".header__middle");
             const startPoint = header.dataset.scroll ? header.dataset.scroll : 1;
             let scrollDirection = 0;
-            let timer;
             document.addEventListener("windowScroll", (function(e) {
                 const scrollTop = window.scrollY;
-                clearTimeout(timer);
+                if (header.classList.contains("_header-scroll")) if (scrollTop <= +startPoint) middle.classList.add("_hide"); else middle.classList.remove("_hide");
                 if (scrollTop >= startPoint) {
                     !header.classList.contains("_header-scroll") ? header.classList.add("_header-scroll") : null;
                     if (arrow) !arrow.classList.contains("_header-scroll") ? arrow.classList.add("_header-scroll") : null;
@@ -14484,6 +14482,7 @@
                     header.classList.contains("_header-scroll") ? header.classList.remove("_header-scroll") : null;
                     if (arrow) arrow.classList.contains("_header-scroll") ? arrow.classList.remove("_header-scroll") : null;
                 }
+                if (scrollTop <= header.offsetHeight) middle.classList.remove("_hide");
                 scrollDirection = scrollTop <= 0 ? 0 : scrollTop;
             }));
         }
