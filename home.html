@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Welcome</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#1E212C">
+</head>
+
+<body>
+	<div class="rootpage">
+		<h1>Адаптивный многостраничный сайт по продаже принтеров, этикеток, сканеров...</h1>
+		<div data-spollers class="info-wrapper">
+			<div data-spoller class="lang _spoller-active">RUS</div>
+			<div class="info-lang-wrapper">
+				<p class="welcome">Здравствуйте! Спасибо, что решили посмотреть моё портфолио. Это приветствующая
+					страница, сам сайт находится ниже по ссылкам.</p>
+				<p class="about">Весь сайт построен на rem и em. Он полностью адаптивен под все устройства. На сайте
+					присутствуют
+					попапы, слайдеры, спойлеры, табы, адаптивное меню-бургер, кастомные радио кнопки, чекбоксы, селекты,
+					увеличение картинки на наведении и
+					многое
+					другое!</p>
+			</div>
+			<div data-spoller class="lang">ENG</div>
+			<div class="info-lang-wrapper">
+				<p class="welcome">Hello! Thank you for taking a look at my portfolio. It's just a welcome page. The real
+					website
+					is below</p>
+				<p class="about">The whole site is made with rem and em. It is fully adaptive. It has pop-ups, sliders,
+					spoilers,
+					tabs, adaptive menu burger, custom radio buttons, checkboxes, select and a lot more!</p>
+			</div>
+		</div>
+		<h2>Страницы / Pages:</h2>
+		<ol class="rootpage__list">
+			<li><a target="_blank" href="index.html">Главная / Main Page</a></li>
+			<li><a target="_blank" href="catalog.html">Каталог / Catalog</a></li>
+			<li><a target="_blank" href="item.html">Страница товара / Item Page</a></li>
+			<li><a target="_blank" href="about.html">О нас / About</a></li>
+			<li><a target="_blank" href="news.html">Новости / News</a></li>
+			<li><a target="_blank" href="article.html">Статья / Article</a></li>
+			<li><a target="_blank" href="automation.html">Автоматизация производства / Automation</a></li>
+			<li><a target="_blank" href="clients.html">Клиенты / Clients</a></li>
+			<li><a target="_blank" href="contacts.html">Контакты / Contacts</a></li>
+			<li><a target="_blank" href="egais.html">ЕГАИС / Egais</a></li>
+			<li><a target="_blank" href="services.html">Услуги / Services</a></li>
+			<li><a target="_blank" href="stocks.html">Выгодные условия / Stock</a></li>
+
+		</ol>
+		<div class="rootpage__contacts">
+			<h2>Мои контакты / My contacts:</h2>
+			<p>Telegram: <a href="https://t.me/adreyil">@adreyil</a></p>
+			<p>Email: <a href="mailto:andrey.ilin823@gmail.com">andrey.ilin823@gmail.com</a></p>
+			<p>Vkontakte: <a href="https://vk.com/ja_ne_andrey" target="_blank">Андрей Ильин</a></p>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20220125131450"></script>
+</body>
+<style>
+	@charset "UTF-8";
+	@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
+
+	*,
+	*::before,
+	*::after {
+		padding: 0px;
+		margin: 0px;
+		border: 0px;
+		box-sizing: border-box;
+	}
+
+	html,
+	body {
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		min-width: 320px;
+		width: 100%;
+		color: #fff;
+		background: #1E212C;
+	}
+
+	body {
+		font-family: Montserrat;
+		font-size: 100%;
+		line-height: 1;
+		font-size: 1rem;
+	}
+
+	a {
+		text-decoration: underline;
+		color: #3f78f4;
+	}
+
+	a:visited {
+		text-decoration: underline;
+		color: #2355c0;
+	}
+
+	a:hover {
+		text-decoration: none;
+	}
+
+	ul li {
+		list-style: none;
+	}
+
+	img {
+		vertical-align: top;
+	}
+
+	.info-wrapper {
+		display: flex;
+		flex-direction: column;
+		margin: 0px 0px 10px 0px;
+	}
+
+	.lang {
+		color: #3f78f4;
+		margin: 0px 0px 10px 0px;
+		cursor: pointer;
+		display: inline-flex;
+		align-items: center;
+		position: relative;
+		padding: 0px 30px 0px 0px;
+		align-self: flex-start;
+	}
+
+	.lang::before {
+		content: '';
+		position: absolute;
+		background-color: #3f78f4;
+		width: 10px;
+		height: 2px;
+		top: 50%;
+		right: 8px;
+		transform: rotate(45deg) translateY(-50%);
+	}
+
+	.lang::after {
+		content: '';
+		position: absolute;
+		background-color: #3f78f4;
+		width: 10px;
+		height: 2px;
+		top: 50%;
+		right: 0;
+		transform: rotate(-45deg) translateY(-50%);
+	}
+
+
+	.lang._spoller-active::before {
+		transform: rotate(-45deg) translateY(-50%);
+		right: 5.5px;
+	}
+
+	.lang._spoller-active::after {
+		transform: rotate(45deg) translateY(-50%);
+	}
+
+	.wrapper {
+		width: 100%;
+		min-height: 100%;
+		overflow: hidden;
+	}
+
+	.welcome {
+		font-size: 2rem;
+		margin: 0px 0px 20px 0px;
+
+	}
+
+	@media (max-width: 767px) {
+		.welcome {
+			font-size: 1.5rem;
+		}
+	}
+
+	.rootpage {
+		padding: 30px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	@media (max-width: 767px) {
+		.rootpage {
+			padding: 30px 15px;
+		}
+	}
+
+	h1 {
+		color: #3f78f4;
+		font-size: 2.5rem;
+		margin: 0px 0px 1.25rem 0px;
+	}
+
+	@media (max-width: 767px) {
+		h1 {
+			font-size: 1.85rem;
+			margin: 0px 0px 1.25rem 0px;
+		}
+	}
+
+	h2 {
+		color: #3f78f4;
+		font-size: 1.25rem;
+		margin: 0px 0px 1rem 0px;
+	}
+
+	@media (max-width: 767px) {
+		h2 {
+			font-size: 1.125rem;
+			margin: 0px 0px 1rem 0px;
+		}
+	}
+
+	.about {
+		line-height: 140%;
+		margin: 0px 0px 1.5rem 0px;
+	}
+
+	.rootpage__list {
+		margin: 0px 0px 2.25rem 1.25rem;
+	}
+
+	.rootpage__list li:not(:last-child) {
+		margin: 0px 0px 15px 0px;
+	}
+
+	.rootpage__contacts a {
+		color: #3f78f4;
+	}
+
+	.rootpage__contacts p {
+		line-height: 1.5em;
+	}
+</style>
+
+</html>
